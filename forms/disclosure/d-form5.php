@@ -251,7 +251,7 @@
     <div class="row mt-5">
         <div class="col">
             <center>
-            <a href='d-form6.php' class="btn btn-lg btn-success w-75">
+            <a href='../other/o-form1.php' class="btn btn-lg btn-success w-75">
                 Next
             </a>
             </center>
