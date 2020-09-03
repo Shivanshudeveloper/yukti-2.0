@@ -112,7 +112,7 @@
                 <div class="row">
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form1.php">    
+                            <a href="forms2/form1.php">    
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/color/60/000000/student-center.png"/>
                             </div>
@@ -126,7 +126,7 @@
                     </div>
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form1.php">    
+                            <a href="forms2/form1.php">    
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/color/60/000000/female-teacher.png"/>
                             </div>
@@ -140,7 +140,7 @@
                     </div>
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form1.php" style="text-decoration: none;">
+                            <a href="forms2/form1.php" style="text-decoration: none;">
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/officel/60/000000/university.png"/>
                             </div>
@@ -161,7 +161,7 @@
                 <div class="row">
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form2.php" style="text-decoration: none;">
+                            <a href="forms2/form2.php" style="text-decoration: none;">
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/color/60/000000/conference-background-selected.png"/>
                             </div>
@@ -175,7 +175,7 @@
                     </div>
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form2.php" style="text-decoration: none;">
+                            <a href="forms2/form2.php" style="text-decoration: none;">
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/color/60/000000/front-desk.png"/>
                             </div>
@@ -189,7 +189,7 @@
                     </div>
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services text-center mb-30">
-                            <a href="forms/form2.php" style="text-decoration: none;">
+                            <a href="forms2/form2.php" style="text-decoration: none;">
                             <div class="services-ion">
                                 <img src="https://img.icons8.com/fluent/60/000000/company.png"/>
                             </div>
@@ -205,53 +205,7 @@
             </div>
         </div>
 
-
-        <!-- Our Services End -->
-        <!-- Visit Our Tailor Start -->
-        <div class="visit-tailor-area fix">
-            <!--Right Contents  -->
-            <div class="tailor-offers"></div>
-            <!-- left Contents -->
-            <div class="tailor-details">
-                <span>All of our Skills In The Fild</span>
-                <h3>Differentiate Yourself And <br>Attractive Attention</h3>
-                <p>Tempor incididunt ut labore et cvhjfhore magna aliqua. Ut<br> enim ad minim veniam, quis.</p>
-                 <!-- skill Start -->
-                <div class="skill-ara">
-                    <div class="skill">
-                        <div class="single-skill">
-                            <div class="progress-count">
-                                <p>User Interface</p><span>75%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar wow slideInLeft" data-wow-duration="1s" data-wow-delay=".5s" aria-valuenow="25" role="progressbar" style="width: 75%"  aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="single-skill">
-                            <div class="progress-count">
-                                <p>Digital Marketing</p><span>89%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar wow slideInLeft" data-wow-duration="1s" data-wow-delay=".7s" role="progressbar" style="width: 89%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="single-skill">
-                            <div class="progress-count">
-                                <p>User Interface</p><span>95%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar wow slideInLeft" data-wow-duration="1s" data-wow-delay=".6s" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- skill End -->
-            </div>
-
-        </div>
-        <!-- Visit Our Tailor End -->
-        <!-- Want To Work Start -->
-        <div class="wantToWork-area w-padding3">
+        <div class="wantToWork-area w-padding3" style="padding-top: 100px;">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-xl-5 col-lg-7 col-md-8">
