@@ -7,11 +7,12 @@
                 <div class="single-slider slider-height d-flex align-items-center">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
+                            <div class="col-lg-9 col-md-8 col-sm-9">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">YUKTI 2.0
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">
+                                        <b style="color: #ff2400;">YUKTI 2.0</b>
                                         <span>
-                                            Innovate, explore, build, with MIC Scheme YUKTI 2.0
+                                            Ideate, Innovate, Scale & Establish. <br /> we invite academic entrepreneurs & starups
                                         </span>
                                     </h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">"You innovate we support</p>
@@ -27,7 +28,8 @@
                         <div class="row">
                             <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">YUKTI 2.0
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">
+                                        <b style="color: #ff2400;">YUKTI 2.0</b>
                                         <span>
                                             Innovate, explore, build, with MIC Scheme YUKTI 2.0
                                         </span>
@@ -42,7 +44,7 @@
             </div>
             <!-- Video icon -->
             <div class="video-icon">
-                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
+                <a class="popup-video btn-icon" href="https://www.youtube.com/embed/Dw3UVWpCMmE" data-animation="bounceIn" data-delay=".4s"><i class="fas fa-play"></i></a>
             </div>
         </div>
         <!-- slider Area End-->
