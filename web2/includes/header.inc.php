@@ -80,6 +80,15 @@
                                                 <li><a href="about.php">About</a></li>
                                                 <li><a href="resources.php">Resoruces</a></li>
                                                 <li><a href="blog.php">Blog</a></li>
+                                                <li><a href="faq.php">FAQ</a></li>
+                                                <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li>
+                                                <script>
+                                                    $("#contactUs2").on('click',function() {
+                                                        $('html, body').animate({
+                                                            'scrollTop' : $("#contactUsForm").position().top
+                                                        });
+                                                    });
+                                                </script>
                                                 <!-- <li><a href="services.html">Services</a></li>
                                                 <li><a href="project.html">Project</a></li>
                                                 <li><a href="#">Pages</a>

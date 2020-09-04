@@ -39,15 +39,32 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" style="height: 500px;" src="images/2.png" alt="">
+                                    <img class="card-img rounded-0" style="height: 400px;" src="images/2.png" alt="">
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">ASQR Technologies</h2>
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Bramhansh Technologies Pvt Ltd.</h2>
                                     </a>
                                     <p>
-                                        Bramhansh Technologies Pvt Ltd. (logo attached- 2)
                                         Innovation Cell helped us by providing our startup with a Kickstarter grant of Rs.10 lakhs for initial R&D and prototype development. It helped us get connected to leading incubators, where we designed our business strategy and implemented our project in real life.  
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" style="height: 400px;" src="images/PRAYAAS.jpg" alt="">
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">TEAM PRAYAAS LLP</h2>
+                                    </a>
+                                    <p>
+                                        The Ministry of Education's Innovation Cell helped us in establishing our startup through a journey from concept to product by the means of grant. Also, technical & Business foundations through pre incubation at Atal Incubation Centre-Rambhau Mhalgi Prabodhini. We would like to thank MIC for providing us this opportunity.
                                     </p>
                                 </div>
                             </article>

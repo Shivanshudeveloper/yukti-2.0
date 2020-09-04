@@ -289,8 +289,8 @@
         </div>
         
         <section style="padding-top: 100px;" class="pb-5 container">
-            <h1 class="display-4 font-weight-bold ml-3">
-                Popular Sectors
+            <h1 class="display-4 font-weight-bold ml-3 mb-2">
+                Primary Sectors of Innovations
             </h1>
             <div class="slider owl-carousel">
                 <div class="card">
@@ -707,7 +707,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12">
+                    <div id="contactUsForm" class="col-lg-6 col-md-12">
                         <!-- contact-form -->
                         <div class="form-wrapper">
                             <div class="row ">
