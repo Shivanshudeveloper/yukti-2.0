@@ -130,7 +130,7 @@
                     </div>
                 </div>
 
-                <div class="single-projects pt-50 pb-50">
+                <div class="single-projects pt-50">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="singel-details mb-30">
@@ -162,8 +162,60 @@
                                 </h4>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="singel-details mb-30">
+                                <span>09.</span>
+                                <h3>
+                                    <a style="color: #ff2400;" href="https://youtu.be/yx8oSHmxMwM" target="_blank">
+                                    Innovating Self-screen and identify right opportunities
+                                    </a>
+                                </h3>
+                                <h4>
+                                    Prof. Sanjay Inamdar
+                                    <br />
+                                    Chairman, AICTE Startup Policy Implementation Committee and Entrepreneur
+                                </h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="single-projects pt-50 pb-50">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="singel-details mb-30">
+                                <span>10.</span>
+                                <h3>
+                                    <a style="color: #ff2400;" href="https://youtu.be/4lqYN1Xhoqg" target="_blank">
+                                    Legal and Ethical Steps- Productive Entrepreneurship and Startups
+                                    </a>
+                                </h3>
+                                <h4>
+                                    Dr. Preet Deep Singh
+                                    <br />
+                                    Invest India
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="singel-details mb-30">
+                                <span>11.</span>
+                                <h3>
+                                    <a style="color: #ff2400;" href="https://youtu.be/rUzTYBcvoQI" target="_blank">
+                                    Legal and Ethical Steps- Productive Entrepreneurship and Startups
+                                    </a>
+                                </h3>
+                                <h4>
+                                    Dr. Laxmi Meera
+                                    <br />
+                                    Program Director, Forge Incubator
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
                 <div class="single-projects-img pt-50">
@@ -180,8 +232,8 @@
                             By MHRD’s Innovation Cell
                         </h2>
                         <div class="singel-details-cap mb-40">
-                            <p class="mb-30">Productboard is the product management system that helps you understand what users need. You don't believe in the commonplace, and neither do we. We strive for absolute greatness - and our watches are the living illustration of that ideology. Are you ready to make your mark?</p>
-                            <a href="https://www.sih.gov.in/" class="btn w-btn">View Now<i class="ti-arrow-right"></i></a>
+                            <p class="mb-30">Smart India Hackathon is a nationwide initiative to provide students with a platform to solve some of the pressing problems we face in our daily lives.</p>
+                            <a href="https://www.sih.gov.in/" class="btn">View Now<i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -190,7 +242,7 @@
                         MIC has envisioned encouraging creation of ‘Institution’s Innovation Council (IICs)’ across selected HEIs.
                         </h2>
                         <div class="singel-details-cap mb-40">
-                            <a href="https://mic.gov.in/iic.php#" class="btn w-btn mt-2">View Now<i class="ti-arrow-right"></i></a>
+                            <a href="https://mic.gov.in/iic.php#" class="btn mt-2">View Now<i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +262,7 @@
                         </h2>
                         <div class="singel-details-cap mb-40">
                             <p class="mb-30">Go through the Policy on Innovation and Startup…….</p>
-                            <a href="https://mic.gov.in/startup_policy.php" class="btn w-btn">View Now<i class="ti-arrow-right"></i></a>
+                            <a href="https://mic.gov.in/startup_policy.php" class="btn">View Now<i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -219,73 +271,10 @@
                         MIC has envisioned encouraging creation of ‘Institution’s Innovation Council (IICs)’ across selected HEIs.
                         </h2>
                         <div class="singel-details-cap mb-40">
-                            <a href="https://www.sih.gov.in/" class="btn w-btn mt-2">View Now<i class="ti-arrow-right"></i></a>
+                            <a href="https://www.sih.gov.in/" class="btn mt-2">View Now<i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="about-caption mb-50">
-                            <div class="section-tittle mb-35">
-                                <h2>Experts speak on Innovation, Entrepreneurship and Startups</h2>
-                                <h4>
-                                By MHRD’s Innovation Cell
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-projects pt-50 pb-50">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="singel-details mb-30">
-                                <span>01.</span>
-                                <h3>
-                                    <a style="color: #ff2400;" href="https://youtu.be/yx8oSHmxMwM" target="_blank">
-                                    Innovating Self-screen and identify right opportunities
-                                    </a>
-                                </h3>
-                                <h4>
-                                    Prof. Sanjay Inamdar
-                                    <br />
-                                    Chairman, AICTE Startup Policy Implementation Committee and Entrepreneur
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="singel-details mb-30">
-                                <span>02.</span>
-                                <h3>
-                                    <a style="color: #ff2400;" href="https://youtu.be/4lqYN1Xhoqg" target="_blank">
-                                    Legal and Ethical Steps- Productive Entrepreneurship and Startups
-                                    </a>
-                                </h3>
-                                <h4>
-                                    Dr. Preet Deep Singh
-                                    <br />
-                                    Invest India
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="singel-details mb-30">
-                                <span>03.</span>
-                                <h3>
-                                    <a style="color: #ff2400;" href="https://youtu.be/rUzTYBcvoQI" target="_blank">
-                                    Legal and Ethical Steps- Productive Entrepreneurship and Startups
-                                    </a>
-                                </h3>
-                                <h4>
-                                    Dr. Laxmi Meera
-                                    <br />
-                                    Program Director, Forge Incubator
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
        

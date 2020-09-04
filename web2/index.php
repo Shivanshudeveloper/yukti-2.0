@@ -1,4 +1,5 @@
 <?php include './includes/header.inc.php' ?>
+<link rel="stylesheet" href="style.css">
     <main>
         <!--? slider Area Start-->
         <div class="slider-area position-relative">
@@ -286,61 +287,346 @@
                 </div>
             </div>
         </div>
-        <!-- cat End -->
-        <!-- Services Area start -->
-        <div class="service-area section-bg" data-background="assets/img/gallery/section_bg01.png">
-            <div class="container">
-                <div class="row align-items-end no-gutters">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="single-main position-relative">
-                            <div class="single-wrapper active">
-                                <div class="single-services ">
-                                    <span>01.</span>
-                                    <h4>Building Yead</h4>
-                                    <p>We collect and analyze information about your general usage of the website to the products services and courses.</p>
-                                </div>
-                                <div class="services-btn">
-                                    <a href="project.html">View More</a>
-                                </div>
-                            </div>
-                            <span class="transparrent-btn active position-absolute">02. Meghna Bridge</span>
-                        </div>
+        
+        <section style="padding-top: 100px;" class="pb-5 container">
+            <h1 class="display-4 font-weight-bold ml-3">
+                Popular Sectors
+            </h1>
+            <div class="slider owl-carousel">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://s1.cdn.autoevolution.com/images/news/gallery/spaceship-neptune-is-a-balloon-that-takes-tourists-to-the-edge-of-space_1.jpg" alt="">
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="single-main position-relative ">
-                            <div class="single-wrapper hide">
-                                <div class="single-services ">
-                                    <span>02.</span>
-                                    <h4>Meghna Bridge</h4>
-                                    <p>We collect and analyze information about your general usage of the website to the products services and courses.</p>
-                                </div>
-                                <div class="services-btn">
-                                    <a href="project.html">View More</a>
-                                </div>
+                        <div class="content">
+                            <div class="title">
+                            Aerospace, Aviation, Space
                             </div>
-                            <span class="transparrent-btn position-absolute">02. Meghna Bridge</span>
-                        </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="single-main position-relative">
-                            <div class="single-wrapper hide">
-                                <div class="single-services ">
-                                    <span>03.</span>
-                                    <h4>Kalis Vadru</h4>
-                                    <p>We collect and analyze information about your general usage of the website to the products services and courses.</p>
-                                </div>
-                                <div class="services-btn">
-                                    <a href="project.html">View More</a>
-                                </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://miro.medium.com/max/2732/1*JGzG0Jhgs-OrMCH1-Qj2MA.jpeg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Agriculture and Allied Industries
                             </div>
-                            <span class="transparrent-btn position-absolute">03. Kalis Vadru</span>
-                        </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.thoughtco.com/thmb/k1DTH6Ane1aqMCAGcolew5_Xbl4=/3867x2175/smart/filters:no_upscale()/chemistry-glassware-56a12a083df78cf772680235.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Chemicals
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://mlvrr32nj6ni.i.optimole.com/xr-IoLo-VxHzPi-h/w:1024/h:683/q:auto/https://hempearth.ca/wp-content/uploads/2019/06/E97E39DF-6606-463F-8BC4-4FDCFCF8BCFA.jpeg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Clean Tech
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://insideretail.com.au/wp-content/uploads/2020/04/shopping_aisle_640x360.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Consumer Goods and Retail
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://media.nationalgeographic.org/assets/photos/818/719/3d97f911-594f-4257-880c-d9aa1c6da22d.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Conventional Energy
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.orfonline.org/wp-content/uploads/2019/07/Indias-national-security-challenge.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Defence & Security
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.solidarity.org.lb/wp-content/uploads/2020/04/Education.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Education
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://s27389.pcdn.co/wp-content/uploads/2016/09/4-fundamental-practices-in-IoT-software-development-1-1024x640.jpeg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Electronics and IoT
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://iifd.in/media/2019/04/fashiondesigning-textile-designing.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Fashion and Textiles
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.medgadget.com/wp-content/uploads/2019/11/Active-Pharmaceutical-Ingredients.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Healthcare and Pharma
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="https://5.imimg.com/data5/PM/DW/MY-15219773/information-technology-services-500x500.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Information & Communication Technologies
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://www.theasset.com/storage/Image/2020/Aug/1597305059newinfrastructuresectors_website.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Infrastructure
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://specials-images.forbesimg.com/imageserve/1006984120/960x0.jpg?fit=scale" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Manufacturing
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Kalgoorlie_open_cast_mine.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Mining, Metals, Materials
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://miro.medium.com/max/3586/1*OMkT_8pxA3cICfLOQjqk0g.png" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Mobility
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://mongooseagency.com/files/3415/9620/1413/Return_of_Sports.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Sports
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://media.noria.com/sites/Uploads/2019/11/19/3ad0b198-2717-4831-a344-f2e35e943bae_ArticleImages_RP31161_1234x694_08022019_extra_large.jpeg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Technologies for Grassroots impact
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://spaceenoughandtime.files.wordpress.com/2017/05/leisure.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Tourism and Hospitality
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://resize.hswstatic.com/w_1024/gif/water-life-crop.jpg" alt="">
+                    </div>
+                        <div class="content">
+                            <div class="title">
+                            Water, Sanitation and Waste Management
+                            </div>
+                            <!-- <div class="sub-title">
+                            Graphic Designer
+                            </div>
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+                            </p> -->
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Services Area End -->
-        <!-- Want To work -->
+        </section>
+
+
+
         <section class="wantToWork-area gray-bg ">
             <div class="container">
                 <div class="wants-wrapper w-padding2">
@@ -474,4 +760,12 @@
             </div>
         </div>
     </main>
+<script>
+      $(".slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000ms = 2s;
+        autoplayHoverPause: true,
+      });
+</script>
 <?php include './includes/footer.inc.php' ?>
