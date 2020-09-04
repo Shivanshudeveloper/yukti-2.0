@@ -10,7 +10,7 @@
                                 <div class="thumb-content">
                                     <h3>Student</h3>
                                     <p>Do you have a technology with commercialization potential? Share a technology disclosure with us and we will ensure that you get the right platform.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -22,7 +22,7 @@
                                 <div class="thumb-content">
                                     <h3>Faculty</h3>
                                     <p>Are you working on a technology with commercialization potential? Share the technology disclosure with us and we will ensure that you get the right opportunities.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                                 <div class="thumb-content">
                                     <h3>Startups</h3>
                                     <p>Are you a student or faculty start up. Share the details with us to participate in this endeavor.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                 <div class="thumb-content">
                                     <h3>Incubator/Accelerator</h3>
                                     <p>Are you an Incubator/Accelerator, extending incubation support to Innovations/technologies/startups . Share the details about you and we will ensure you the outreach to Innovations/technologies/startups from academic institutions.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>
                         </div>
