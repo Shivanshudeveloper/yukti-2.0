@@ -52,7 +52,7 @@
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
-                                    <a href="#" class="btn">Free Quote <i class="ti-arrow-right"></i></a>
+                                    <a href="register.php" class="btn">Register Today <i class="ti-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img class="img img-fluid w-75" src="images/MIC_LOGO.png" alt="MIC"></a>
+                                    <a href="index.php"><img class="img img-fluid w-75" src="images/MIC_LOGO.png" alt="MIC"></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-8">
@@ -75,15 +75,10 @@
                                             <ul id="navigation">                                                                                          
                                                 <li class="active"><a href="index.php">Home</a></li>
                                                 <li><a href="about.php">About</a></li>
-                                                <li><a href="services.html">Services</a></li>
+                                                <li><a href="resources.php">Resoruces</a></li>
+                                                <li><a href="blog.php">Blog</a></li>
+                                                <!-- <li><a href="services.html">Services</a></li>
                                                 <li><a href="project.html">Project</a></li>
-                                                <li><a href="blog.html">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
-                                                    </ul>
-                                                </li>
                                                 <li><a href="#">Pages</a>
                                                     <ul class="submenu">
                                                         <li><a href="project_details.html">Project Details</a></li>
@@ -91,7 +86,7 @@
                                                         <li><a href="elements.html">Element</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="contact.html">Contact</a></li> -->
                                             </ul>
                                         </nav>
                                     </div>

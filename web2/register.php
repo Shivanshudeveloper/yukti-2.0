@@ -52,7 +52,7 @@
                                 <div class="thumb-content">
                                     <h3>Incubator/Accelerator</h3>
                                     <p>Are you an Incubator/Accelerator, extending incubation support to Innovations/technologies/startups . Share the details about you and we will ensure you the outreach to Innovations/technologies/startups from academic institutions.</p>
-                                    <a href="forms/form1.php">Register</a>
+                                    <a href="forms/form2.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                 <div class="thumb-content">
                                     <h3>Organization/Industry</h3>
                                     <p>Are you organization/industry hosting events and programs on entrepreneurship and startups? Share with us details and we will ensure the outreach to best of innovations/technologies/startups from academic institutions.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form2.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                                 <div class="thumb-content">
                                     <h3>Investor</h3>
                                     <p>Are you an investor? Work with us and we will provide the best of Innovations/technologies/startups in your interest sector.</p>
-                                    <a href="services.html">Register</a>
+                                    <a href="forms/form2.php">Register</a>
                                 </div>
                             </div>
                         </div>
