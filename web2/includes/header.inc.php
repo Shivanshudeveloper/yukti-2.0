@@ -82,7 +82,7 @@
                                                 <li><a href="resources.php">Resoruces</a></li>
                                                 <li><a href="blog.php">Blog</a></li>
                                                 <li><a href="faq.php">FAQ</a></li>
-                                                <li><a href="faq.php">Technology Incubators</a></li>
+                                                <!-- <li><a href="faq.php">Technology Incubators</a></li> -->
                                                 <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li>
                                                 <script>
                                                     $("#contactUs2").on('click',function() {

@@ -23,7 +23,7 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" style="height: 500px;" src="images/2392374 logo.jpg" alt="">
+                                    <img class="card-img rounded-0" style="width: 25%;" src="images/2392374 logo.jpg" alt="">
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
@@ -39,7 +39,7 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" style="height: 400px;" src="images/2.png" alt="">
+                                    <img class="card-img rounded-0" style="width: 25%;" src="images/2.png" alt="">
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
@@ -57,7 +57,7 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" style="height: 400px;" src="images/PRAYAAS.jpg" alt="">
+                                    <img class="card-img rounded-0" style="width: 25%;" src="images/PRAYAAS.jpg" alt="">
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
