@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Industrial | Teamplate</title>
+    <title>Yukti 2.0 | MIC</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -55,7 +55,8 @@
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
-                                    <a href="register.php" class="btn">Register Today <i class="ti-arrow-right"></i></a>
+                                    <a href="./dashboard/" class="btn">Login<i class="ti-arrow-right"></i></a>
+                                    <a href="register.php" class="btn">Register<i class="ti-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +71,7 @@
                                     <a href="index.php"><img class="img img-fluid w-75" src="images/MIC_LOGO.png" alt="MIC"></a>
                                 </div>
                             </div>
-                            <div class="col-xl-9 col-lg-8">
+                            <div class="col">
                                 <div class="menu-wrapper  d-flex align-items-center">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
@@ -81,6 +82,7 @@
                                                 <li><a href="resources.php">Resoruces</a></li>
                                                 <li><a href="blog.php">Blog</a></li>
                                                 <li><a href="faq.php">FAQ</a></li>
+                                                <li><a href="faq.php">Technology Incubators</a></li>
                                                 <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li>
                                                 <script>
                                                     $("#contactUs2").on('click',function() {
@@ -104,18 +106,6 @@
                                     </div>
                                 </div>
                             </div> 
-                            <div class="col-xl-1 col-lg-2">
-                                <!-- Search Box -->
-                                <div class="search d-none d-lg-block">
-                                    <ul>
-                                        <li>
-                                            <div class="nav-search search-switch">
-                                                <span class="fas fa-search"></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>

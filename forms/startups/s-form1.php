@@ -69,8 +69,6 @@
         </div>
     </div>
 
-    <hr />
-
     <div class="row mt-5">
         <div class="col col-lg-3">
             <h5>Name of Founder</h5>
