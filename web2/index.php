@@ -185,7 +185,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3>Evaluators/ Experts</h3>
-                                    <p>Do you have a technology with commercialization potential? Share a technology disclosure with us and we will ensure that you get the right platform.</p>
+                                    <p>Get a chance to work with Ministry of Education. Join our panel of experts TODAY !</p>
                                     <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3>Mentors</h3>
-                                    <p>Are you a student or faculty start up. Share the details with us to participate in this endeavor.</p>
+                                    <p>Want to be a mentor ? Join the our team of mentors TODAY ! & help the innovations from acadmics reach their potentials.</p>
                                     <a href="forms/form1.php">Register</a>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@
     <!--Main layout-->
     <main class="mt-4 mb-5 container">
         <h2 class="display-4 font-weight-bold">
-            DISCLOSURE FORM
+            INNOVATION DISCLOSURE FORM
         </h2>
         <div class="row mt-4">
             <div class="col col-lg-3">
