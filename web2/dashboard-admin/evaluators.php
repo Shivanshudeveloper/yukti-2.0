@@ -12,6 +12,38 @@
         </select>
         <br />
         <br />
+        <!-- Modal -->
+        <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comments</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-4">
+                        <textarea class="form-control" placeholder="Message" id="form4Example3" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+                </button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+            </div>
+        </div>
+        </div>
         <section class="text-center text-md-left mt-4">
             <table class="table">
                 <thead>
@@ -21,55 +53,79 @@
                     <th scope="col">Project Assign</th>
                     <th scope="col">Status</th>
                     <th scope="col">Recent Activity</th>
+                    <th scope="col">-</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
                         <td>
-                            <a href="info.php">
-                                Akhil Joshi
+                            <a href="evaluator-profile.php">
+                                Manish Sharma
                             </a>
                         </td>
                         <td>Technology Project 1</td>
                         <td>Under Evaluation</td>
                         <td>9/9/20</td>
+                        <td>
+                            <button 
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                            class="btn btn-sm btn-primary">
+                                Send Reminder
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row">2</th>
                         <td>
-                            <a href="info.php">
+                            <a href="evaluator-profile.php">
                                 Rohhan Roy
                             </a>
                         </td>
                         <td>Technology Project 2</td>
                         <td>Under Evaluation</td>
                         <td>9/9/20</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">
+                                Send Reminder
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row">3</th>
                         <td>
-                            <a href="info.php">
+                            <a href="evaluator-profile.php">
                                 Kriti Singh
                             </a>
                         </td>
                         <td>Technology Project 3</td>
                         <td>Completed</td>
                         <td>1/9/20</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">
+                                Send Reminder
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row">4</th>
                         <td>
-                            <a href="info.php">
+                            <a href="evaluator-profile.php">
                                 Manan Goel
                             </a>
                         </td>
                         <td>Technology Project 4</td>
                         <td>Completed</td>
                         <td>3/9/20</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">
+                                Send Reminder
+                            </button>
+                        </td>
                     </tr>
                     
                 </tbody>

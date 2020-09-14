@@ -24,7 +24,7 @@
                     >Category Wise Reports</a
                     >
                 </li>
-                <li class="nav-item" role="presentation">
+                <!-- <li class="nav-item" role="presentation">
                     <a
                     class="nav-link"
                     id="ex2-tab-2"
@@ -32,6 +32,18 @@
                     href="#ex2-tabs-2"
                     role="tab"
                     aria-controls="ex2-tabs-2"
+                    aria-selected="false"
+                    >Custom Reports</a
+                    >
+                </li> -->
+                <li class="nav-item" role="presentation">
+                    <a
+                    class="nav-link"
+                    id="ex2-tab-4"
+                    data-toggle="tab"
+                    href="#ex2-tabs-4"
+                    role="tab"
+                    aria-controls="ex2-tabs-4"
                     aria-selected="false"
                     >Custom Reports</a
                     >
@@ -48,6 +60,9 @@
                     >All Reports</a
                     >
                 </li>
+
+                
+                
                 </ul>
                 <!-- Tabs navs -->
 
@@ -181,12 +196,59 @@
                 </div>
                 <div
                     class="tab-pane fade"
-                    id="ex2-tabs-2"
+                    id="ex2-tabs-3"
                     role="tabpanel"
-                    aria-labelledby="ex2-tab-2"
+                    aria-labelledby="ex2-tab-3"
                 >
                     <section>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#!" class="btn btn-secondary btn-lg btn-block" >
+                                        Download Brief Report
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#!" class="btn btn-primary btn-lg btn-block" >
+                                        Download Complete Report
+                                    </a>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="ex2-tabs-4"
+                    role="tabpanel"
+                    aria-labelledby="ex2-tab-4"
+                >
+                <section>
                         <div class="row">
+                                <div class="col">
+                                    <select class="form-select float-left" aria-label="Default select example">
+                                        <option selected>-- SECTORS --</option>
+                                        <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
+                                        <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
+                                        <option value="Chemicals">Chemicals</option>
+                                        <option value="Clean Tech">Clean Tech</option>
+                                        <option value="Consumer Goods and Retail">Consumer Goods and Retail</option>
+                                        <option value="Conventional Energy">Conventional Energy</option>
+                                        <option value="Defence & Security">Defence & Security</option>
+                                        <option value="Education">Education</option>
+                                        <option value="Electronics and IoT">Electronics and IoT</option>
+                                        <option value="Fashion and Textiles">Fashion and Textiles</option>
+                                        <option value="Healthcare and Pharma">Healthcare and Pharma</option>
+                                        <option value="Information and Communication Technologies">Information and Communication Technologies</option>
+                                        <option value="Infrastructure">Infrastructure</option>
+                                        <option value="Manufacturing">Manufacturing</option>
+                                        <option value="Mining, Metals, Materials">Mining, Metals, Materials</option>
+                                        <option value="Mobility">Mobility</option>
+                                        <option value="Sports">Sports</option>
+                                        <option value="Technologies for Grassroots impact">Technologies for Grassroots impact</option>
+                                        <option value="Tourism and Hospitality">Tourism and Hospitality</option>
+                                        <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
                                 <div class="col">
                                     <select class="form-select float-left" aria-label="Default select example">
                                         <option selected>-- SELECT YOUR TR --</option>
@@ -225,10 +287,25 @@
                                         <option selected>-- SELECT OTHERS --</option>
                                         <option value="Have Patent">Have Patent</option>
                                         <option value="Not Patent">Not Patent</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select float-left" aria-label="Default select example">
+                                        <option selected>-- SELECT OTHERS --</option>
                                         <option value="Awards Won">Awards Won</option>
                                         <option value="No Awards Won">No Awards Won</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select float-left" aria-label="Default select example">
+                                        <option selected>-- SELECT OTHERS --</option>
                                         <option value="3rd Party Validated">3rd Party Validated</option>
                                         <option value="No 3rd Party Validated">No 3rd Party Validated</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select float-left" aria-label="Default select example">
+                                        <option selected>-- SELECT OTHERS --</option>
                                         <option value="Funded">Funded</option>
                                         <option value="Not Funded">Not Funded</option>
                                     </select>
@@ -329,20 +406,6 @@
                             </table>
 
                             
-                    </section>
-                </div>
-                <div
-                    class="tab-pane fade"
-                    id="ex2-tabs-3"
-                    role="tabpanel"
-                    aria-labelledby="ex2-tab-3"
-                >
-                    <section>
-                        <center>
-                            <a href="#!" class="btn btn-success btn-lg w-25" >
-                                Download PDF
-                            </a>
-                        </center>
                     </section>
                 </div>
             </div>

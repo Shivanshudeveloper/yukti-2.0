@@ -1,7 +1,27 @@
 <?php include './includes/header.inc.php' ?>
     <main class="my-5">
       <div class="container">
-        <select class="form-select float-left w-50" aria-label="Default select example">
+        <div class="row mt-2">
+            <div class="col col-lg-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rad" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Evaluators
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rad" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Mentos
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <select class="form-select mt-2 float-left w-50" aria-label="Default select example">
                     <option selected>-- SORT BY --</option>
                     <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
                     <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
@@ -25,9 +45,10 @@
                     <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
                     <option value="Others">Others</option>
         </select>
+        
         <!--Section: Content-->
         <button data-toggle="modal" data-target="#exampleModal" class="btn btn-success float-right">
-            Assign Evaluator
+            Assign
         </button>
         
         <!-- Modal -->
@@ -202,4 +223,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 <?php include '../includes/footer.inc.php' ?>

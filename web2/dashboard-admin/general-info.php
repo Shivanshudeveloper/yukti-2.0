@@ -29,6 +29,10 @@
                 magni velit laborum itaque minima doloribus eligendi!
               </p>
 
+              <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Support Asked For: Funding</h4>
+              </div>
+
               <p><strong>Optio sapiente molestias consectetur?</strong></p>
 
               <p>

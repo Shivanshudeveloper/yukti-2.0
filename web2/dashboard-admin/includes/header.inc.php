@@ -52,7 +52,7 @@
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="home.php">All Submission</a>
+                <a class="nav-link" aria-current="page" href="home.php">Submissions</a>
               </li>
               <li class="nav-item">
                 <a
@@ -72,6 +72,11 @@
                   >Bulk Allocation</a
                 >
               </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="mentors.php"
+                  >For Mentornships</a
+                >
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="reports.php"
                   >Reports</a

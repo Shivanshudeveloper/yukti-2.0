@@ -18,7 +18,51 @@
       <div class="container">
         <!--Section: Content-->
         <section class="text-center text-md-left">
-          <h4 class="mb-5"><strong>Latest posts</strong></h4>
+          <h4 class="mb-5"><strong>Completed (80)</strong></h4>
+          <!-- Post -->
+          <div class="row">
+            <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>-- SORT BY --</option>
+                        <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
+                        <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
+                        <option value="Chemicals">Chemicals</option>
+                        <option value="Clean Tech">Clean Tech</option>
+                        <option value="Consumer Goods and Retail">Consumer Goods and Retail</option>
+                        <option value="Conventional Energy">Conventional Energy</option>
+                        <option value="Defence & Security">Defence & Security</option>
+                        <option value="Education">Education</option>
+                        <option value="Electronics and IoT">Electronics and IoT</option>
+                        <option value="Fashion and Textiles">Fashion and Textiles</option>
+                        <option value="Healthcare and Pharma">Healthcare and Pharma</option>
+                        <option value="Information and Communication Technologies">Information and Communication Technologies</option>
+                        <option value="Infrastructure">Infrastructure</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Mining, Metals, Materials">Mining, Metals, Materials</option>
+                        <option value="Mobility">Mobility</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Technologies for Grassroots impact">Technologies for Grassroots impact</option>
+                        <option value="Tourism and Hospitality">Tourism and Hospitality</option>
+                        <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
+                        <option value="Others">Others</option>
+                  </select>
+            </div>
+            <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>-- RECOMMENDED FOR --</option>
+                  <option value="Market Research">Market Research</option>
+                  <option value="Funding">Funding</option>
+                  <option value="Pre-Incubation">Pre-Incubation</option>
+                  <option value="Licencing / Commercialization">Licencing / Commercialization</option>
+                  <option value="IP Protection">IP Protection</option>
+                  <option value="Mentorship">Mentorship</option>
+                  <option value="Distribution Network">Distribution Network</option>
+                </select>
+            </div>
+          </div>
+          
+        <br />
+        <br />
           <!-- Post -->
           <div class="card mt-2">
             <div class="card-body">
@@ -29,6 +73,7 @@
               <h6 class="font-weight-bold text-success">
                 Approved
               </h6>
+              <h5><span class="badge bg-primary">Recommended for: Funding</span></h5>
               <p class="card-text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               </p>
