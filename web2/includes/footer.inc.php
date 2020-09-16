@@ -23,7 +23,7 @@
                     <div class="col-xl-6 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle mb-50">
-                                <h4>Discliminar</h4>
+                                <h4>Disclaimer</h4>
                                 <p>
                                 This website is designed, developed and maintained by MHRD Innovation Cell (MIC)/AICTE. The website is for the purpose of inviting submissions of ...
                                 <a data-toggle="modal" data-target="#exampleModal" class="text-primary" href="#!">Read More</a>

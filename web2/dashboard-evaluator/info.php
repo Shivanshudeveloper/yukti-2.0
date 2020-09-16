@@ -305,23 +305,11 @@
                             Mentornship
                         </li>
                         <li class="list-group-item">
-                          <select class="form-select float-left" aria-label="Default select example">
-                            <option selected>-- SELECT FOR MENTORNSHIPS--</option>
-                            <option value="Market Research">Market Research</option>
-                            <option value="Innovations">Innovations</option>
-                          </select>
-                        </li>
-                        <li class="list-group-item">
                             <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
                             Funding
                         </li>
                         <li class="list-group-item">
-                          <select class="form-select float-left" aria-label="Default select example">
-                            <option selected>-- SELECT FOR MENTORNSHIPS--</option>
-                            <option value="Investor Connects">Investor Connects</option>
-                            <option value="Technology Validation">Technology Validation</option>
-                            <option value="Incubation/Acceleration">Incubation/Acceleration</option>
-                          </select>
+                            Do You Also Suggest Any of the Following
                         </li>
                         <li class="list-group-item">
                             <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />

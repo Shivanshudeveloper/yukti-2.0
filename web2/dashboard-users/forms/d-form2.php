@@ -1,5 +1,6 @@
-<?php include '../includes/header.inc.php' ?>
+<?php include './header.php' ?>
     <!--Main layout-->
+    <form action="../../src/php/main.php" method="POST">
     <main class="mt-4 mb-5 container">
         <h2 class="display-4 font-weight-bold">
             DISCLOSURE FORM
@@ -34,12 +35,13 @@
         <div class="row mt-5">
             <div class="col">
                 <center>
-                <a href='d-form3.php' class="btn btn-lg btn-success w-75">
+                <button type="submit" name="d2SubmitBtn" class="btn btn-lg btn-success w-75">
                     Next
-                </a>
+                </button>
                 </center>
             </div>
         </div>
     </main>
+    </form>
     <!--Main layout-->
-<?php include '../includes/footer.inc.php' ?>
+<?php include './footer.php' ?>

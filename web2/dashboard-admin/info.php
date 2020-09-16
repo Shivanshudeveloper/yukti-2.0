@@ -237,43 +237,43 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Bill Gates
+                        Bill Gates (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Warren Buffet
+                        Warren Buffet (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Mark Zugerberg
+                        Mark Zugerberg (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Jeff Bezos
+                        Jeff Bezos (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Lio Frennirio
+                        Lio Frennirio (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Bill Gates
+                        Bill Gates (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Warren Buffet
+                        Warren Buffet (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Mark Zugerberg
+                        Mark Zugerberg (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Jeff Bezos
+                        Jeff Bezos (10)
                     </li>
                     <li class="list-group-item">
                         <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                        Lio Frennirio
+                        Lio Frennirio (10)
                     </li>
                 </ul>
 
@@ -283,12 +283,8 @@
 
               <!--Section: Video-->
               <section class="">
-                <h4>
-                    For
-                </h4>
-                
                 <a href="under_evaluation.php" class="btn mt-2 btn-block btn-lg btn-success">
-                    Send
+                    Allocate
                 </a>
               </section>
               <!--Section: Video-->

@@ -1,4 +1,4 @@
-<?php include '../includes/header.inc.php' ?>
+<?php include './header.php' ?>
     <!--Main layout-->
     <main class="mt-4 mb-5 container">
         <h2 class="display-4 font-weight-bold">
@@ -302,4 +302,4 @@
 
     <script src="cities.js"></script>
 <script language="javascript">print_state("sts");</script>
-<?php include '../includes/footer.inc.php' ?>
+<?php include './footer.php' ?>

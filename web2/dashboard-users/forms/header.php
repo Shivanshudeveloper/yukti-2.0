@@ -52,17 +52,17 @@
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="home.php"
+                <a class="nav-link" href="../home.php"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="forms/d-form1.php"
+                <a class="nav-link" href="d-form1.php"
                   >Submit New Innovation Disclosure</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="underreview.php"
+                <a class="nav-link" href="../underreview.php"
                   >Projects Under Review</a
                 >
               </li>

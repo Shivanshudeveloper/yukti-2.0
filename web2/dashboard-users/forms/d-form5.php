@@ -1,5 +1,6 @@
-<?php include '../includes/header.inc.php' ?>
+<?php include './header.php' ?>
     <!--Main layout-->
+    <form action="../../src/php/main.php" method="POST">
     <main class="mt-4 mb-5 container">
         <h2 class="display-4 font-weight-bold">
             DISCLOSURE FORM
@@ -15,7 +16,7 @@
             
             <div class="col col-lg-1">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad" id="flexRadioDefault1" checked>
+                    <input class="form-check-input" value="Yes" type="radio" name="rad" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                         Yes
                     </label>
@@ -24,7 +25,7 @@
 
             <div class="col-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad" id="flexRadioDefault2">
+                    <input class="form-check-input" value="No" type="radio" name="rad" id="flexRadioDefault2">
                     <label class="form-check-label" for="flexRadioDefault2">
                         No
                     </label>
@@ -43,7 +44,7 @@
             
             <div class="col col-lg-1">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad2" id="flexRadioDefault3" checked>
+                    <input class="form-check-input" type="radio" value="Yes" name="rad2" id="flexRadioDefault3" checked>
                     <label class="form-check-label" for="flexRadioDefault3">
                         Yes
                     </label>
@@ -52,7 +53,7 @@
 
             <div class="col-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad2" id="flexRadioDefault4">
+                    <input class="form-check-input" type="radio" value="No" name="rad2" id="flexRadioDefault4">
                     <label class="form-check-label" for="flexRadioDefault4">
                         No
                     </label>
@@ -70,7 +71,7 @@
         <div class="row mt-2">
             <div class="col col-lg-1">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad3" id="flexRadioDefault5" checked>
+                    <input class="form-check-input" type="radio" value="Yes" name="rad3" id="flexRadioDefault5" checked>
                     <label class="form-check-label" for="flexRadioDefault5">
                         Yes
                     </label>
@@ -79,7 +80,7 @@
 
             <div class="col-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad3" id="flexRadioDefault6">
+                    <input class="form-check-input" type="radio" value="No" name="rad3" id="flexRadioDefault6">
                     <label class="form-check-label" for="flexRadioDefault6">
                         No
                     </label>
@@ -97,7 +98,7 @@
         <div class="row mt-2">
             <div class="col col-lg-1">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad4" id="flexRadioDefault7" checked>
+                    <input class="form-check-input" type="radio" value="Yes" name="rad4" id="flexRadioDefault7" checked>
                     <label class="form-check-label" for="flexRadioDefault7">
                         Yes
                     </label>
@@ -106,7 +107,7 @@
 
             <div class="col-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad4" id="flexRadioDefault8">
+                    <input class="form-check-input" type="radio" value="No" name="rad4" id="flexRadioDefault8">
                     <label class="form-check-label" for="flexRadioDefault8">
                         No
                     </label>
@@ -124,7 +125,7 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="businessStatus" id="businessStatus" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Incorporated Company">Incorporated Company</option>
                     <option value="Academic Institution">Academic Institution</option>
@@ -145,7 +146,7 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="primaryCustomers" id="primaryCustomers" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="B2B">B2B</option>
                     <option value="B2C">B2C</option>
@@ -164,7 +165,7 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="commercialization" id="commercialization" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Manufacturing & Distribution">Manufacturing & Distribution</option>
                     <option value="Licensing">Licensing</option>
@@ -184,7 +185,7 @@
         <div class="row mt-2">
             <div class="col col-lg-1">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad5" id="flexRadioDefault9" checked>
+                    <input class="form-check-input" type="radio" value="Yes" name="rad5" id="flexRadioDefault9" checked>
                     <label class="form-check-label" for="flexRadioDefault9">
                         Yes
                     </label>
@@ -193,7 +194,7 @@
 
             <div class="col-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rad5" id="flexRadioDefault10">
+                    <input class="form-check-input" type="radio" value="No" name="rad5" id="flexRadioDefault10">
                     <label class="form-check-label" for="flexRadioDefault10">
                         No
                     </label>
@@ -232,13 +233,13 @@
         <div class="row mt-5">
             <div class="col">
                 <center>
-                <a href='o-form1.php' class="btn btn-lg btn-success w-75">
-                    Next
-                </a>
+                <button type="submit" name="d5SubmitBtn" class="btn btn-lg btn-success w-75">
+                    Submit
+                </button>
                 </center>
             </div>
         </div>
-
     </main>
+    </form>
     <!--Main layout-->
-<?php include '../includes/footer.inc.php' ?>
+<?php include './footer.php' ?>

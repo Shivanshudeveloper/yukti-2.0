@@ -693,8 +693,8 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
                         <div class="section-tittle text-center mb-100">
-                            <span class="element">Testimonial</span>
-                            <h2>Some amazing words from our clients</h2>
+                            <span class="element">Inspirational Quotes</span>
+                            <h2>What leaders think</h2>
                         </div>
                     </div>
                 </div>

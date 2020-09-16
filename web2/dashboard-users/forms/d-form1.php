@@ -1,5 +1,6 @@
-<?php include '../includes/header.inc.php' ?>
+<?php include './header.php' ?>
     <!--Main layout-->
+    <form action="../../src/php/main.php" method="POST">
     <main class="mt-4 mb-5 container">
         <h2 class="display-4 font-weight-bold">
             INNOVATION DISCLOSURE FORM
@@ -9,7 +10,7 @@
                 <h5>Sector</h5>
             </div>
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="sector" name="sector" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
                     <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
@@ -73,7 +74,7 @@
                 <h5>Stage of Technology</h5>
             </div>
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="stage" name="stage" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="TRL 0-2">TRL 0-2</option>
                     <option value="TRL 3">TRL 3</option>
@@ -88,22 +89,10 @@
                 <h5>Support required</h5>
             </div>
             <div class="col">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="support" name="support" aria-label="Default select example">
                     <option selected>-- SELECT YOUR OPTIONS --</option>
-                    <option value="Market Research">Market Research</option>
                     <option value="Funding">Funding</option>
-                    <option value="Pre-Incubation">Pre-Incubation</option>
-                    <option value="Compliance Support">Compliance Support</option>
-                    <option value="Licencing / Commercialization">Licencing / Commercialization</option>
-                    <option value="IP Protection">IP Protection</option>
-                    <option value="Test Bed">Test Bed</option>
-                    <option value="Investor Connects">Investor Connects</option>
-                    <option value="Incubation/Acceleration/Co-Working Services">Incubation/Acceleration/Co-Working Services</option>
-                    <option value="Technology Validation">Technology Validation</option>
-                    <option value="Mentorship/ Domain Experts">Mentorship/ Domain Experts</option>
-                    <option value="Training">Training</option>
-                    <option value="Distribution Network">Distribution Network</option>
-                    <option value="Others (in case of others, please provide details)">Others (in case of others, please provide details)</option>
+                    <option value="Mentorship">Mentorship</option>
                 </select>
             </div>
         </div>
@@ -112,11 +101,12 @@
 
             </div>
             <div class="col">
-                <a href="d-form2.php" class="btn btn-block btn-lg btn-success">
+                <button type="submit" name="d1SubmitBtn" class="btn btn-block btn-lg btn-success">
                     Next
-                </a>
+                </button>
             </div>
         </div>
     </main>
+    </form>
     <!--Main layout-->
-<?php include '../includes/footer.inc.php' ?>
+<?php include './footer.php' ?>
