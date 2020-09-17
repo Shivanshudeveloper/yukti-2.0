@@ -107,8 +107,76 @@ if (isset($_POST['d5SubmitBtn'])) {
     $sql = "INSERT INTO `innovation_d_5`(`user_id`, `project_id`, `third_party_validated`, `featured`, `presented`, `funds`, `business_status`, `primary_customers`, `commercialization`, `prospective_users`, `competition`, `unique_selling`) VALUES ('$userID','$projectID','$rad','$rad2','$rad3','$rad4','$businessStatus','$primaryCustomers','$commercialization','$rad5','$describeSegement','$uniqueSelling')";
     $res = mysqli_query($conn, $sql);
     
-    mysqli_query($conn, "INSERT INTO `allprojects`(`user_id`, `project_id`, `progress`) VALUES ('$userID','$projectID',1)");
+    mysqli_query($conn, "INSERT INTO `allprojects`(`user_id`, `project_id`, `progress`, `completed`, `status`) VALUES ('$userID','$projectID', 0, 0, 0)");
 
     header("Location: ../../dashboard-users/forms/thankyou.php?id=".$projectID);
+    exit();
+}
+
+
+if (isset($_POST['allocateEvaluatorBtn'])) {
+    $projectID = mysqli_real_escape_string($conn, $_POST['projectID']);
+    $numberEvaluation = 0;
+    $count = 0;
+    foreach($_POST['checkbox'] as $checkbox){
+        $sql = "SELECT * FROM project_assign WHERE project_id = '$projectID' AND evaluators_id = '$checkbox';";
+        $result = mysqli_query($conn, $sql);
+        $resultChk = mysqli_num_rows($result);
+        if ($resultChk < 1) {
+            $sql = "INSERT INTO project_assign (`project_id`, `evaluators_id`) VALUES ('$projectID', '$checkbox');";
+            mysqli_query($conn, $sql);
+            $sql = "SELECT * FROM evaluators WHERE email = '$checkbox';";
+            $result = mysqli_query($conn, $sql);
+            if ($row = mysqli_fetch_assoc($result)) {
+                $numberEvaluation = $row['assign'];
+                $numberEvaluation = $numberEvaluation + 1;
+            }
+            $sql = "UPDATE evaluators SET `assign` = $numberEvaluation WHERE email = '$checkbox';";
+            mysqli_query($conn, $sql);
+        }
+        $count = $count + 1;
+    }
+    $sql = "UPDATE allprojects SET progress = '$count' WHERE project_id = '$projectID';";
+    mysqli_query($conn, $sql);
+    // User ID to be given here from Session
+    $userID = '12345678';
+
+    header("Location: ../../dashboard-admin/info.php?id=".$projectID."&s=g");
+    exit();
+}
+
+if (isset($_POST['evaluatorApprovedBtn'])) {
+    $projectID = mysqli_real_escape_string($conn, $_POST['projectID']);
+    $evaluatorsEmailID = mysqli_real_escape_string($conn, $_POST['evaluatorsEmailID']);
+    $status = 0;
+    foreach($_POST['checkbox'] as $checkbox){
+        $sql = "INSERT INTO evaluators_reccomendation (`project_id`, `evaluators_id`, `assign`) VALUES ('$projectID', '$evaluatorsEmailID', '$checkbox');";
+        mysqli_query($conn, $sql);
+    }
+
+    $sql = "SELECT * FROM allprojects WHERE project_id = '$projectID';";
+    $result = mysqli_query($conn, $sql);
+    if ($row = mysqli_fetch_assoc($result)) {
+        $status = (int)$row['status'];
+        if ($status != 3 && $status != -1) {
+            $status = $status + 1;
+        } 
+    }
+
+    $sql = "UPDATE allprojects SET completed = 1, status = '$status' WHERE project_id = '$projectID';";
+    mysqli_query($conn, $sql);
+    
+    header("Location: ../../dashboard-evaluator/home.php?id=".$projectID."&s=g");
+    exit();
+}
+
+if (isset($_POST['evaluatorDisapprovedBtn'])) {
+    $projectID = mysqli_real_escape_string($conn, $_POST['projectID']);
+    $evaluatorsEmailID = mysqli_real_escape_string($conn, $_POST['evaluatorsEmailID']);
+
+    $sql = "UPDATE allprojects SET completed = 1, status = -1 WHERE project_id = '$projectID';";
+    mysqli_query($conn, $sql);
+    
+    header("Location: ../../dashboard-evaluator/home.php?id=".$projectID."&s=d");
     exit();
 }

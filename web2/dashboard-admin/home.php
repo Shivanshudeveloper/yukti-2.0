@@ -101,66 +101,46 @@
                     <option value="Tourism and Hospitality">Tourism and Hospitality</option>
                     <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
                     <option value="Others">Others</option>
-        </select>
+          </select>
         <br />
         <br />
-
-          
-          <div class="card mt-2">
-            <div class="card-body">
-              <!-- <span class="float-right" >
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Mark for Evaluation
-              </span> -->
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <a href="info.php" class="btn btn-primary float-right">Read</a>
-            </div>
-          </div>
-
-          <div class="card mt-2">
-            <div class="card-body">
-              <!-- <span class="float-right" >
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Mark for Evaluation
-              </span> -->
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
-
-          <div class="card mt-2">
-            <div class="card-body">
-              <!-- <span class="float-right" >
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Mark for Evaluation
-              </span> -->
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
-
-          <div class="card mt-2">
-            <div class="card-body">
-              <!-- <span class="float-right" >
-                <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                Mark for Evaluation
-              </span> -->
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
+        <?php
+          include_once '../src/php/dbh.php';
+          // From Session
+          $userId = '12345678';
+          $sql = "SELECT * FROM allprojects WHERE progress < 3;";
+          $result = mysqli_query($conn, $sql);
+          $resultChk = mysqli_num_rows($result);
+          if ($resultChk < 1) {
+              echo '
+                <h2 class="text-center mt-4 mb-4" >
+                  No Projects Found!
+                  <br />
+                  <br />
+                </h2>
+              ';
+          } else {
+            while ($row = mysqli_fetch_assoc($result)) {
+              $projectID = $row['project_id'];
+              $sql = "SELECT innovation_d_4.*, innovation_d_2.* FROM innovation_d_4, innovation_d_2 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_2.project_id = '$projectID'";
+              $result2 = mysqli_query($conn, $sql);
+              if ($row2 = mysqli_fetch_assoc($result2)) {
+                echo '
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <span class="badge bg-danger float-right h5">'.$row['progress'].'</span>
+                      <h5 class="card-title">'.$row2['name_product'].'</h5>
+                      <p class="card-text">
+                        '.$row2['innovation_address'].'
+                      </p>
+                      <a href="info.php?id='.$projectID.'" class="btn btn-primary float-right">Read</a>
+                    </div>
+                  </div>
+                ';
+              }
+            }
+          }
+        ?>
 
            
 

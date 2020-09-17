@@ -291,24 +291,25 @@ session_start();
               <!--Section: Ad-->
               <section class="border-bottom pb-4 mb-4">
                 <h4>
-                    Evaluators List
+                    Evaluators Assigned
                 </h4>
                 <form action="../src/php/main.php" method="POST">
                 <ul class="list-group">
                     <?php 
-                      $sql = "SELECT * FROM evaluators ORDER BY assign ASC;";
+                      $sql = "SELECT * FROM project_assign WHERE project_id = '$projectID';";
                       $result = mysqli_query($conn, $sql);
-                      echo '
-                        <input type="hidden" name="projectID" value="'.$projectID.'" />
-                      ';
                       while ($row = mysqli_fetch_assoc($result)) {
-                        echo '
-                          <li class="list-group-item">
-                              <input class="form-check-input mr-1" type="checkbox" value="'.$row['email'].'" name="checkbox[]" />
-                              '.$row['full_name'].' 
-                              <span class="badge bg-primary float-right h5">'.$row['assign'].'</span>
-                          </li>
-                        ';
+                        $email = $row['evaluators_id'];
+
+                        $sql2 = "SELECT * FROM evaluators WHERE email = '$email';";
+                        $result2 = mysqli_query($conn, $sql2);
+                        if ($row2 = mysqli_fetch_assoc($result2)) {
+                            echo '
+                            <li class="list-group-item">
+                                '.$row2['full_name'].' 
+                            </li>
+                            ';
+                        }
                       }
                     ?>
                 </ul>
@@ -317,9 +318,9 @@ session_start();
 
               <!--Section: Video-->
               <section class="">
-                <button type="submit" name="allocateEvaluatorBtn" class="btn mt-2 btn-block btn-lg btn-success">
+                <!-- <button type="submit" name="allocateEvaluatorBtn" class="btn mt-2 btn-block btn-lg btn-success">
                     Allocate
-                </button>
+                </button> -->
               </section>
               </form>
               <!--Section: Video-->

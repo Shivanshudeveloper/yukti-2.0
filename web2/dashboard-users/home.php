@@ -15,29 +15,9 @@
         <!--Section: Content-->
         <section class="text-center text-md-left">
           <h4 class="mb-5"><strong>Your Projects</strong></h4>
-          <!-- Post -->
-          <div class="card mt-2">
-            <div class="card-body">
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <a href="info.php" class="btn btn-primary float-right">Read</a>
-              <a href="mentor-profile.php" class="btn btn-success float-right mr-2">Contact Mentor</a>
-            </div>
-          </div>
+          
 
 
-          <div class="card mt-2">
-            <div class="card-body">
-              <h5 class="card-title">Title 1</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-              <a href="mentor-profile.php" class="btn btn-success float-right mr-2">Contact Mentor</a>
-            </div>
-          </div>
 
 
         </section>

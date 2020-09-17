@@ -1,4 +1,3 @@
-
 <?php include './includes/header.inc.php' ?>
 <?php 
 include_once '../src/php/dbh.php';
@@ -305,5 +304,4 @@ session_start();
       </div>
     </main>
     <!--Main layout-->
-
 <?php include './includes/footer.inc.php' ?>

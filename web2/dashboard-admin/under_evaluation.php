@@ -18,7 +18,7 @@
       <div class="container">
         <!--Section: Content-->
         <section class="text-center text-md-left">
-        <h4 class="mb-5"><strong>Under Evaluation (80)</strong></h4>
+        <h4 class="mb-5"><strong>Under Evaluation </strong></h4>
           <!-- Post -->
           <select class="form-select float-left w-25" aria-label="Default select example">
                     <option selected>-- SORT BY --</option>
@@ -47,18 +47,36 @@
         <br />
         <br />
           <!-- Post -->
-          <div class="card mt-2">
-            <div class="card-body">
-              <h5 class="card-title">Title 1</h5>
-              <h6>
-                  Evaluation By: Bill Gates
-              </h6>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <a href="info.php" class="btn btn-primary float-right">Read</a>
-            </div>
-          </div>
+          
+          <?php
+            include_once '../src/php/dbh.php';
+            // From Session
+            $userId = '12345678';
+            $sql = "SELECT * FROM allprojects WHERE progress = 3;";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+              $projectID = $row['project_id'];
+
+              $sql = "SELECT innovation_d_4.*, innovation_d_2.* FROM innovation_d_4, innovation_d_2 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_2.project_id = '$projectID'";
+              $result2 = mysqli_query($conn, $sql);
+              if ($row2 = mysqli_fetch_assoc($result2)) {
+                echo '
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <span class="badge bg-danger float-right h5">'.$row['progress'].'</span>
+                      <h5 class="card-title">'.$row2['name_product'].'</h5>
+                      <p class="card-text">
+                        '.$row2['innovation_address'].'
+                      </p>
+                      <a href="underevaluationinfo.php?id='.$projectID.'" class="btn btn-primary float-right">Read</a>
+                    </div>
+                  </div>
+                ';
+              }
+            }
+          ?>
+
+
         </section>
       </div>
     </main>
