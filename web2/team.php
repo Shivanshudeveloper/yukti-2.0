@@ -32,7 +32,7 @@
                 <div class="col">
                     <div>
                     <center>    
-                    <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Avatar" class="avatar">
+                    <img src="images/aj.jpg" alt="Avatar" class="avatar">
                     </center>
                         <h3 class="text-center" >
                             Dr. Abhey Jere
@@ -45,7 +45,7 @@
                 <div class="col">
                     <div>
                     <center>    
-                    <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Avatar" class="avatar">
+                    <img src="images/mg.jpg" alt="Avatar" class="avatar">
                     </center>    
                         <h3 class="text-center" >
                         Dr. Mohit Gambhir
@@ -58,7 +58,7 @@
                 <div class="col">
                     <div>
                     <center>    
-                    <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Avatar" class="avatar">
+                    <img src="images/Pooja_CIAP.jpg" alt="Avatar" class="avatar">
                     </center>    
                     <h3 class="text-center" >
                     Ms. Pooja Rawat

@@ -42,7 +42,7 @@
                             } elseif ($_GET['e'] == 'ea') {
                                 echo '
                                     <div class="alert alert-danger" >
-                                        Email Already Registered Please <a href="login.php">Login</a>
+                                        Email Already Registered Please <a href="../login.php">Login</a>
                                     </div>
                                 ';
                             } elseif ($_GET['e'] == 'ss') {

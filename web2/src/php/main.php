@@ -278,7 +278,7 @@ if (isset($_POST['userFormSubmitBtn'])) {
         } else {
             $sql = "INSERT INTO `users_2`(`user_id`, `full_name`, `email`, `phone`, `institute`, `type`, `password`) VALUES ('$userID','$fullname','$email','$phone','$institute','$type','$password')";
             mysqli_query($conn, $sql);
-            header("Location: ../../forms/form1.php?e=ss&t=".$t);
+            header("Location: ../../login.php?e=ss&t=".$t);
             exit();    
         }
     } else {
