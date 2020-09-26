@@ -31,37 +31,83 @@
             <div class="card w-50 mt-2 shadow">
                 <div class="card-body">
                     <h5 style="color: #ff2400" class="card-title text-center display-4 font-weight-bold">Yukti 2.0</h5>
-                    
-                    <form class="text-left">
+                    <?php
+                        if (isset($_GET['e'])) {
+                            if ($_GET['e'] == 'pc') {
+                                echo '
+                                    <div class="alert alert-danger" >
+                                        Please Confirm the Password
+                                    </div>
+                                ';
+                            } elseif ($_GET['e'] == 'ea') {
+                                echo '
+                                    <div class="alert alert-danger" >
+                                        Email Already Registered Please <a href="login.php">Login</a>
+                                    </div>
+                                ';
+                            } elseif ($_GET['e'] == 'ss') {
+                                echo '
+                                    <div class="alert alert-success" >
+                                        Registered Successfully
+                                    </div>
+                                ';
+                            } 
+                        }
+                    ?>
+                    <form action="../src/php/main.php" method="POST" class="text-left">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" name="fullname" id="exampleInputEmail1" required aria-describedby="emailHelp">
                         </div>
+                        <?php
+                            if (isset($_GET['t'])) {
+                                echo '
+                                    <input name="t" type="hidden" value="'.$_GET['t'].'" class="form-control" required id="exampleInputPassword1">
+                                ';
+                                if ($_GET['t'] == 's') {
+                                    echo '
+                                        <input name="type" type="hidden" value="STUDENT" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                } elseif ($_GET['t'] == 'f') {
+                                    echo '
+                                        <input name="type" type="hidden" value="FACULTY" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                } elseif ($_GET['t'] == 'i') {
+                                    echo '
+                                        <input name="type" type="hidden" value="INSTITUTE" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                } elseif ($_GET['t'] == 'st') {
+                                    echo '
+                                        <input name="type" type="hidden" value="STARTUP" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                }
+                            }
+                        ?>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1">
+                            <input type="email" class="form-control" name="email" required id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Phone No</label>
-                            <input type="phone" class="form-control" id="exampleInputPassword1">
+                            <input type="phone" class="form-control" name="phone" required id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Institute Name</label>
-                            <?php include '../includes/search_institutes.php' ?>
+                            <?php include '../includes/search_institutes_copy.php' ?>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" name="password" required id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" name="confirmpassword" required id="exampleInputPassword1">
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" required id="exampleCheck1">
                             <a href="" style="text-decoration: none;" class="form-check-label" for="exampleCheck1">I accept Terms & Conditions</a>
                         </div>
-                        <a href="dashboard.php" class="btn btn-primary btn-lg btn-block">Register</a>
+                        <button type="submit" name="userFormSubmitBtn" class="btn btn-primary btn-lg btn-block">Register</button>
                     </form>
                 </div>
             </div>

@@ -60,26 +60,81 @@
                 </select>
             </div>
           </div>
-          
+          <center>
+            <a href="disapproved.php" class="btn btn-danger mt-2">All Dsiapproved Projects</a>
+          </center>
         <br />
         <br />
           <!-- Post -->
-          <div class="card mt-2">
-            <div class="card-body">
-              <h5 class="card-title">Title 1</h5>
-              <h6>
-                  Evaluated By: Bill Gates
-              </h6>
-              <h6 class="font-weight-bold text-success">
-                Approved
-              </h6>
-              <h5><span class="badge bg-primary">Recommended for: Funding</span></h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <a href="info.php" class="btn btn-primary float-right">Read</a>
-            </div>
-          </div>
+          
+          
+          
+
+          <?php 
+            include_once '../src/php/dbh.php';
+            // This ID Shoud come from the Session
+            $evaluatorsName = '';
+            $sql = "SELECT DISTINCT `project_id`, `evaluators_id` FROM evaluators_reccomendation;";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+              $projectID = $row['project_id'];
+              $evaluatorsEmail = $row['evaluators_id'];
+
+              $sqlInvestors = "SELECT `investors` FROM allprojects WHERE project_id = '$projectID' AND investors = 0 AND mentors = 0;";
+              $resultInvestor = mysqli_query($conn, $sqlInvestors);
+              $resultChk = mysqli_num_rows($resultInvestor);
+              if ($resultChk > 0) {
+                $sqlEvaluator = "SELECT `title`, `full_name` FROM evaluators WHERE email = '$evaluatorsEmail';";
+                $resultEvaluator = mysqli_query($conn, $sqlEvaluator);
+                if ($rowEvaluator = mysqli_fetch_assoc($resultEvaluator)) {
+                  $evaluatorsName = $rowEvaluator['title']. '. '.$rowEvaluator['full_name'];
+                }
+                $sqlApproved = "SELECT * FROM evaluators_reccomendation WHERE project_id = '$projectID';";
+                $resultApproved = mysqli_query($conn, $sqlApproved);
+                $approvedRecommendation = '';
+                while ($rowApproved = mysqli_fetch_assoc($resultApproved)) {
+                  $approvedRecommendation = $rowApproved['assign'] . ', ' . $approvedRecommendation;
+                }
+                $approvedRecommendation = substr($approvedRecommendation, 0, -1);
+                $sql2 = "SELECT * FROM allprojects WHERE project_id = '$projectID';";
+                $result2 = mysqli_query($conn, $sql2);
+                while ($row2 = mysqli_fetch_assoc($result2)) {
+                  $status = $row2['status'];
+                  $sql3 = "SELECT innovation_d_4.*, innovation_d_2.* FROM innovation_d_4, innovation_d_2 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_2.project_id = '$projectID'";
+                  $result3 = mysqli_query($conn, $sql3);
+                  if ($row3 = mysqli_fetch_assoc($result3)) {
+                    echo '
+                      <div class="card mt-2">
+                        <div class="card-body">
+                        ';
+                        if ($status == 3 || $status == 1 ) {
+                          echo '
+                            <span class="badge bg-success float-right">Approved</span>
+                          ';
+                        } elseif ($status == -1) {
+                          echo '
+                            <span class="badge bg-danger float-right">Dsiapproved</span>
+                          ';
+                        }
+                        echo
+                        '
+                          <h5 class="card-title">'.$row3['name_product'].'</h5>
+                          <h6>
+                              Evaluated By: '.$evaluatorsName.'
+                          </h6>
+                          <h5><span class="badge bg-primary">Recommended for: '.substr($approvedRecommendation, 0, -1).'</span></h5>
+                          <p class="card-text">
+                            '.$row3['innovation_address'].'
+                          </p>
+                          <a href="investorinfo.php?id='.$projectID.'" class="btn btn-primary float-right">Read</a>
+                        </div>
+                      </div>
+                    ';
+                  }
+                }
+              }
+            }
+          ?>
         </section>
       </div>
     </main>

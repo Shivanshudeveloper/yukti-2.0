@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
           <!-- Navbar brand -->
-          <a class="navbar-brand" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <a class="navbar-brand" href="home.php">
             Yukti 2.O Dashboard
           </a>
           <button
@@ -69,7 +69,9 @@
             </ul>
             <ul class="navbar-nav list-inline">
               <li class="nav-item">
+              <a class="nav-link" href="profile.php" >
                 <i class="fas fa-user-alt fa-2x"></i>
+              </a>
               </li>
             </ul>
           </div>

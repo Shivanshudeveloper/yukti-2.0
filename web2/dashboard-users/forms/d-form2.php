@@ -14,7 +14,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-check">
-                    <textarea class="form-control" name="problemInnovation" id="problemInnovation" rows="10"></textarea>
+                    <textarea class="form-control" required name="problemInnovation" id="problemInnovation" rows="10"></textarea>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-check">
-                    <textarea class="form-control" name="solutionInnovation" id="solutionInnovation" rows="10"></textarea>
+                    <textarea class="form-control" required name="solutionInnovation" id="solutionInnovation" rows="10"></textarea>
                 </div>
             </div>
         </div>

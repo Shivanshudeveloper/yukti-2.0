@@ -52,7 +52,7 @@
             include_once '../src/php/dbh.php';
             // From Session
             $userId = '12345678';
-            $sql = "SELECT * FROM allprojects WHERE progress = 3;";
+            $sql = "SELECT * FROM allprojects WHERE completed = 0;";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
               $projectID = $row['project_id'];

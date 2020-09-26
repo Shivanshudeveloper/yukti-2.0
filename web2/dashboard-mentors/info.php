@@ -1,5 +1,9 @@
 
 <?php include './includes/header.inc.php' ?>
+<?php 
+include_once '../src/php/dbh.php';
+session_start(); 
+?>
     <!--Main layout-->
     <main class="mt-4 mb-5">
       <div class="container">
@@ -8,11 +12,52 @@
           <!--Grid column-->
           <div class="col-md-8 mb-4">
             <!--Section: Post data-->
+                  <?php 
+                    if (isset($_GET['ms'])) {
+                      echo '
+                          <div class="alert alert-success" >
+                            <h3>
+                              Mentors Assign Successfully
+                            </h3>
+                          </div>
+                      ';
+                    } elseif (isset($_GET['is'])) {
+                      echo '
+                      <div class="alert alert-success" >
+                        <h3>
+                          Investors Assign Successfully
+                        </h3>
+                      </div>
+                  ';
+                    }
+                  ?>
             <section class="border-bottom mb-4">
               <div class="row align-items-center mb-4">
                 <div class="col-lg-6 text-center text-lg-left mb-3 m-lg-0">
-                  <span class="h5 text-dark" > Technology 1 </span>
-                  <p>Shivanshu Gupta (STUDENT)</p>
+                  
+                  <span class="h5 text-dark" > 
+                    
+                    <?php 
+                      $projectID = $_GET['id'];
+                      $industryUse = '';
+                      $sql = "SELECT innovation_d_4.*, innovation_d_3.* FROM innovation_d_4, innovation_d_3 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_3.project_id = '$projectID' ;";
+                      $result = mysqli_query($conn, $sql);
+                      if ($row = mysqli_fetch_assoc($result)) { 
+                        echo $row['name_product']; 
+                        echo '</span>';
+                        echo '
+                          <p>'.$row['nameInventor'].' (STUDENT)</p>
+                        ';
+                        $industryUse = $row['industry_use'];
+                      }
+
+                      $sql = "SELECT * FROM allprojects WHERE project_id = '$projectID';";
+                      $result = mysqli_query($conn, $sql);
+                      if ($row = mysqli_fetch_assoc($result)) {
+                          $id = $row['id'] + 1000;
+                          echo 'Your Reference ID is: '.$id;
+                      }
+                    ?>  
                 </div>
               </div>
             </section>
@@ -20,41 +65,27 @@
 
             <!--Section: Text-->
             <section>
-
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-                consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-                ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-                Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-                magni velit laborum itaque minima doloribus eligendi!
+                <?php 
+                  $innovation = '';
+                  $solution = '';
+                  $sql = "SELECT * FROM innovation_d_2 WHERE project_id = '$projectID';";
+                  $result = mysqli_query($conn, $sql);
+                  if ($row = mysqli_fetch_assoc($result)) { 
+                    echo $row['solution'];
+                    $innovation = $row['innovation_address'];
+                    $solution = $row['solution'];
+                  }
+                ?>
               </p>
 
-              <div class="alert alert-info" role="alert">
-                <h4 class="alert-heading">Support Asked For: Funding</h4>
-              </div>
-
-              <p><strong>Optio sapiente molestias consectetur?</strong></p>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto ex ab aut
-                tempora officia libero praesentium, sint id magnam eius natus unde blanditiis. Autem
-                adipisci totam sit consequuntur eligendi.
-              </p>
-
-              <p class="note note-light">
+              <!-- <p class="note note-light">
                 <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Optio odit consequatur porro sequi ab distinctio modi. Rerum cum dolores sint,
                 adipisci ad veritatis laborum eaque illum saepe mollitia ut voluptatum.
-              </p>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, libero repellat
-                molestiae aperiam laborum aliquid atque magni nostrum, inventore perspiciatis
-                possimus quia incidunt maiores molestias eaque nam commodi! Magnam, labore.
-              </p>
+              </p> -->
             
-              <h5>
+              <!-- <h5>
                   Tags
               </h5>
               <ul>
@@ -63,47 +94,100 @@
                 <li>Dolor</li>
                 <li>Sit</li>
                 <li>Amet</li>
-              </ul>
+              </ul> -->
+              <h5>
+                Asked For
+              </h5>
+              <div class="alert alert-info">  
+                <h5>
+                  <?php 
+                    $sql = "SELECT * FROM innovation_d_1 WHERE project_id = '$projectID';";
+                    $result = mysqli_query($conn, $sql);
+                    if ($row = mysqli_fetch_assoc($result)) { 
+                      echo $row['support_required'];
+                    }
+                  ?>
+                </h5>
+              </div>
+
+              <?php 
+                $sqlApproved = "SELECT `assign` FROM evaluators_reccomendation WHERE project_id = '$projectID';";
+                $resultApproved = mysqli_query($conn, $sqlApproved);
+                $approvedRecommendation = '';
+                while ($rowApproved = mysqli_fetch_assoc($resultApproved)) {
+                  $approvedRecommendation = $rowApproved['assign'] . ', ' . $approvedRecommendation;
+                }
+                $approvedRecommendation = substr($approvedRecommendation, 0, -1);
+
+                echo '
+                  <h5>
+                    Recommended For
+                  </h5>
+                  <div class="alert alert-info">
+                    <h5>
+                      '.substr($approvedRecommendation, 0, -1).'
+                    </h5>
+                  </div>
+                ';
+              ?>
 
               <h5>
               What basic problem does your innovation address? 
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-                voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-                officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
+                <?php echo $innovation ?>
               </p>
 
               <h5>
               Which industries would your innovation find use in? 
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-                voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-                officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
+                <?php 
+                  echo $industryUse;
+                ?>
               </p>
 
               <h5>
               Explain your solution/innovation?
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-                voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-                officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
+                <?php echo $solution; ?>
               </p>
 
               <h5>
               Has your technology been validated by a 3rd party? 
               </h5>
               <p>
-                YES <a class="ml-2" href="#!">Download File</a>
+                <?php 
+                  $featured = '';
+                  $presented = '';
+                  $funds = '';
+                  $business_status = '';
+                  $primary_customers = '';
+                  $commercialization = '';
+                  $prospective_users = '';
+                  $sql = "SELECT * FROM innovation_d_5 WHERE project_id = '$projectID';";
+                  $result = mysqli_query($conn, $sql);
+                  if ($row = mysqli_fetch_assoc($result)) { 
+                    echo $row['third_party_validated'];
+                    $featured = $row['featured'];
+                    $presented = $row['presented'];
+                    $funds = $row['funds'];
+                    $prospective_users = $row['prospective_users'];
+                    $commercialization = $row['commercialization'];
+                    $business_status = $row['business_status'];
+                    $primary_customers = $row['primary_customers'];
+                  }
+                ?>
+                <!-- YES <a class="ml-2" href="#!">Download File</a> -->
               </p>
 
               <h5>
               Has the innovation been featured or described or presented in any publications/conferences/ exhibits?
               </h5>
               <p>
-                YES <a class="ml-2" href="#!">Download File</a>
+                <?php echo $featured; ?>
+                <!-- YES <a class="ml-2" href="#!">Download File</a> -->
               </p>
 
 
@@ -111,7 +195,7 @@
               Has the innovation/ technology been presented in any competition?
               </h5>
               <p>
-                NO
+                <?php echo $presented; ?>
               </p>
 
               <h5>
@@ -125,35 +209,37 @@
               Has the Innovation/ technology earlier received any grant/ funds from government/ non-government organizations?
               </h5>
               <p>
-                YES<a class="ml-2" href="#!">Download File</a>
+                <?php echo $funds; ?>
+                <!-- YES<a class="ml-2" href="#!">Download File</a> -->
               </p>
 
               <h5>
               What is the business status of the organization developing this innovation? 
               </h5>
               <p>
-                Company
+                <?php echo $business_status; ?>
               </p>
 
               <h5>
               Who are the primary customers that would purchase it?
               </h5>
               <p>
-                B2B
+                <?php echo $primary_customers; ?>
               </p>
 
               <h5>
               What method of commercialization do you suggest? 
               </h5>
               <p>
-              Manufacturing & Distribution
+              <?php echo $commercialization; ?>
               </p>
 
               <h5>
               Have any prospective users or buyers shown interest in this innovation? 
               </h5>
               <p>
-              YES<a class="ml-2" href="#!">Download File</a>
+                <?php echo $prospective_users; ?>
+              <!-- YES<a class="ml-2" href="#!">Download File</a> -->
               </p>
 
               <h5>
@@ -225,84 +311,32 @@
             <!--Section: Reply-->
           </div>
           <!--Grid column-->
+          <!--Grid column-->
 
           <!--Grid column-->
-          
+          <div class="col-md-4 mb-4">
+            <!--Section: Sidebar-->
+            <section class="sticky-top" style="top: 20px;">
+              <!--Section: Ad-->
+              <section class="border-bottom pb-4 mb-4">
+                <!-- <h4>
+                  Assigned To
+                </h4> -->
+              </section>
+              <section class="">
+                
+              </section>
+              
+              <!--Section: Video-->
+            </section>
+            <!--Section: Sidebar-->
+          </div>
           <!--Grid column-->
         </div>
         <!--Grid row-->
       </div>
     </main>
     <!--Main layout-->
-
-    <!-- Modal -->
-    <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-        >
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Assign</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            Mentornship
-                        </li>
-                        <li class="list-group-item">
-                          <select class="form-select float-left" aria-label="Default select example">
-                            <option selected>-- SELECT FOR MENTORNSHIPS--</option>
-                            <option value="Market Research">Market Research</option>
-                            <option value="Innovations">Innovations</option>
-                          </select>
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            Funding
-                        </li>
-                        <li class="list-group-item">
-                          <select class="form-select float-left" aria-label="Default select example">
-                            <option selected>-- SELECT FOR MENTORNSHIPS--</option>
-                            <option value="Investor Connects">Investor Connects</option>
-                            <option value="Technology Validation">Technology Validation</option>
-                            <option value="Incubation/Acceleration">Incubation/Acceleration</option>
-                          </select>
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            Pre Incubation
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            IP Protection
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            Licencing/Commercialization
-                        </li>
-                        <li class="list-group-item">
-                            <input class="form-check-input mr-1" type="checkbox" value="" aria-label="..." />
-                            Distribution Network
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                    Close
-                    </button>
-                    <button type="button" class="btn btn-primary">Submit</button>
-                </div>
-                </div>
-            </div>
-        </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

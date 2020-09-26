@@ -20,7 +20,7 @@
                 Innovations to be Mentored
               </h5>
             </div>
-            <select class="form-select float-left w-25" aria-label="Default select example">
+            <!-- <select class="form-select float-left w-25" aria-label="Default select example">
                       <option selected>-- SORT BY --</option>
                       <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
                       <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
@@ -43,65 +43,37 @@
                       <option value="Tourism and Hospitality">Tourism and Hospitality</option>
                       <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
                       <option value="Others">Others</option>
-          </select>
+          </select> -->
           <br />
           <br />
           <!-- Post -->
-          <div class="card mt-2">
-            <div class="card-body">
-              <h6 class="float-right">
-                Assined on 8/10/2020
-              </h6>
-              <h5 class="card-title">Title 1</h5>
-              <h5><span class="badge bg-primary">Funding</span></h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <a href="info.php" class="btn btn-primary float-right">Read</a>
-            </div>
-          </div>
+          <?php
+            include_once '../src/php/dbh.php';
+            // WILL COME FROM Session
+            $mentorsID = 'roke@gmail.com';
+            $sql = "SELECT DISTINCT `project_id` FROM project_assign_mentors WHERE mentors_id = '$mentorsID';";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+              $projectID = $row['project_id'];
+              $sql2 = "SELECT innovation_d_4.*, innovation_d_2.* FROM innovation_d_4, innovation_d_2 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_2.project_id = '$projectID'";
+              $result2 = mysqli_query($conn, $sql2);
+              if ($row2 = mysqli_fetch_assoc($result2)) {
+                echo '
+                  <div class="card mt-2">
+                    <div class="card-body">
+                      <h5 class="card-title">'.$row2['name_product'].'</h5>
+                      <p class="card-text">
+                        '.$row2['innovation_address'].'
+                      </p>
+                      <a href="info.php?id='.$projectID.'" class="btn btn-primary float-right">Read</a>
+                    </div>
+                  </div>
+                ';
+              }
+            }
+          
+          ?>
 
-          <div class="card mt-2">
-            <div class="card-body">
-              <h6 class="float-right">
-                Assined on 8/10/2020
-              </h6>
-              <h5 class="card-title">Title 1</h5>
-              <h5><span class="badge bg-primary">Funding</span></h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
-
-          <div class="card mt-2">
-            <div class="card-body">
-              <h6 class="float-right">
-                Assined on 8/10/2020
-              </h6>
-              <h5 class="card-title">Title 1</h5>
-              <h5><span class="badge bg-primary">Funding</span></h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
-
-          <div class="card mt-2">
-            <div class="card-body">
-              <h6 class="float-right">
-                Assined on 8/10/2020
-              </h6>
-              <h5 class="card-title">Title 1</h5>
-              <h5><span class="badge bg-primary">Funding</span></h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button type="button" class="btn btn-primary float-right">Read</button>
-            </div>
-          </div>
 
            
 

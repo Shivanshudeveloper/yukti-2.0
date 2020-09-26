@@ -14,7 +14,7 @@
                 <h5>What is the name of your product/technology?</h5>
             </div>
             <div class="col">
-                <input type="text" class="form-control" id="technologyName" name="technologyName" aria-describedby="emailHelp">
+                <input type="text" required class="form-control" id="technologyName" name="technologyName" aria-describedby="emailHelp">
             </div>
         </div>
 
@@ -27,7 +27,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-check">
-                    <textarea class="form-control" name="innovation" id="innovation" rows="10"></textarea>
+                    <textarea class="form-control" required name="innovation" id="innovation" rows="10"></textarea>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-file ml-4">
-                    <input type="file" class="form-file-input" name="document" id="document">
+                    <input type="file" class="form-file-input" required name="document" id="document">
                     <label class="form-file-label" for="customFile">
                         <span class="form-file-text">Choose</span>
                         <span class="form-file-button">Browse</span>
@@ -60,7 +60,24 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-file ml-4">
-                    <input type="file" name="image" id="image" class="form-file-input">
+                    <input type="file" name="image" id="image" required class="form-file-input">
+                    <label class="form-file-label" for="customFile">
+                        <span class="form-file-text">Choose</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col col-lg-5 ml-4">
+                <h5>IT Returns (If any)</h5>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <div class="form-file ml-4">
+                    <input type="file" name="itreturns" id="itreturns" class="form-file-input">
                     <label class="form-file-label" for="customFile">
                         <span class="form-file-text">Choose</span>
                         <span class="form-file-button">Browse</span>

@@ -10,8 +10,8 @@
                 <h5>Sector</h5>
             </div>
             <div class="col">
-                <select class="form-select" id="sector" name="sector" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" id="sector" name="sector" required aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Aerospace, Aviation, Space">Aerospace, Aviation, Space</option>
                     <option value="Agriculture and Allied Industries">Agriculture and Allied Industries</option>
                     <option value="Chemicals">Chemicals</option>
@@ -74,8 +74,8 @@
                 <h5>Stage of Technology</h5>
             </div>
             <div class="col">
-                <select class="form-select" id="stage" name="stage" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" id="stage" required name="stage" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="TRL 0-2">TRL 0-2</option>
                     <option value="TRL 3">TRL 3</option>
                     <option value="TRL 4-5">TRL 4-5</option>
@@ -89,8 +89,8 @@
                 <h5>Support required</h5>
             </div>
             <div class="col">
-                <select class="form-select" id="support" name="support" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required id="support" name="support" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Funding">Funding</option>
                     <option value="Mentorship">Mentorship</option>
                 </select>

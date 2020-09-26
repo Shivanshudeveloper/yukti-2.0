@@ -55,7 +55,7 @@
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
-                                    <a href="./dashboard/" class="btn">Login<i class="ti-arrow-right"></i></a>
+                                    <a href="login.php" class="btn">Login<i class="ti-arrow-right"></i></a>
                                     <a href="register.php" class="btn">Register<i class="ti-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -80,8 +80,10 @@
                                                 <li class="active"><a href="index.php">Home</a></li>
                                                 <li><a href="about.php">About</a></li>
                                                 <li><a href="resources.php">Resoruces</a></li>
-                                                <li><a href="blog.php">Blog</a></li>
+                                                <!-- <li><a href="blog.php">Blog</a></li> -->
+                                                <li><a href="announcement.php">Announcements</a></li>
                                                 <li><a href="faq.php">FAQ</a></li>
+                                                <li><a href="team.php">Team</a></li>
                                                 <!-- <li><a href="faq.php">Technology Incubators</a></li> -->
                                                 <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li>
                                                 <script>

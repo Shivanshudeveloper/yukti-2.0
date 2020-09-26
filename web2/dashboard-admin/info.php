@@ -11,36 +11,41 @@ session_start();
         <div class="row">
           <!--Grid column-->
           <div class="col-md-8 mb-4">
+          <?php
+            if (isset($_GET['s'])) {
+                echo '
+                    <div class="alert alert-success" >
+                      <h3>
+                        Assign Successfully
+                      </h3>
+                    </div>
+                ';
+            }
+            ?>
             <!--Section: Post data-->
-                  <?php 
-                    if (isset($_GET['s'])) {
-                      if ($_GET['s'] == 'g') {
-                        echo '
-                          <div class="alert alert-success" >
-                            <h3>
-                              Evaluators Assign Successfully
-                            </h3>
-                          </div>
-                        ';
-                      }
-                    }
-                  ?>
             <section class="border-bottom mb-4">
               <div class="row align-items-center mb-4">
                 <div class="col-lg-6 text-center text-lg-left mb-3 m-lg-0">
-                  
                   <span class="h5 text-dark" > 
-                    
                     <?php 
                       $projectID = $_GET['id'];
                       $industryUse = '';
+                      $productName = '';
+                      $description_document = '';
+                      $photos_product = '';
+                      $itreturns = '';
+                      $awardsWon = '';
                       $sql = "SELECT innovation_d_4.*, innovation_d_3.* FROM innovation_d_4, innovation_d_3 WHERE innovation_d_4.project_id = '$projectID' AND innovation_d_3.project_id = '$projectID' ;";
                       $result = mysqli_query($conn, $sql);
                       if ($row = mysqli_fetch_assoc($result)) { 
+                        $productName = $row['name_product'];
+                        $description_document = $row['description_document'];
+                        $photos_product = $row['photos_product'];
+                        $itreturns = $row['itreturns'];
                         echo $row['name_product']; 
                         echo '</span>';
                         echo '
-                          <p>'.$row['nameInventor'].' (STUDENT)</p>
+                          <p>'.$row['nameInventor'].' ('.$_SESSION['type'].')</p>
                         ';
                         $industryUse = $row['industry_use'];
                       }
@@ -93,9 +98,11 @@ session_start();
               <div class="alert alert-info">
                 <h2>
                   <?php 
+                    $stageTechnology = '';
                     $sql = "SELECT * FROM innovation_d_1 WHERE project_id = '$projectID';";
                     $result = mysqli_query($conn, $sql);
-                    if ($row = mysqli_fetch_assoc($result)) { 
+                    if ($row = mysqli_fetch_assoc($result)) {
+                      $stageTechnology = $row['stage']; 
                       echo '<h4>Asked For: '.$row['support_required'].'</h4>';
                     }
                   ?>
@@ -137,13 +144,24 @@ session_start();
                   $primary_customers = '';
                   $commercialization = '';
                   $prospective_users = '';
+                  $third_party_validated = '';
+                  $featured = '';
+                  $presented = '';
+                  $competition = '';
                   $sql = "SELECT * FROM innovation_d_5 WHERE project_id = '$projectID';";
                   $result = mysqli_query($conn, $sql);
                   if ($row = mysqli_fetch_assoc($result)) { 
                     echo $row['third_party_validated'];
                     $featured = $row['featured'];
+                    $awardsWon = $row['awards'];
                     $presented = $row['presented'];
+                    $competition = $row['competition'];
                     $funds = $row['funds'];
+
+                    $third_party_validated = $row['third_party_validated'];
+                    $featured = $row['featured'];
+                    $presented = $row['presented'];
+
                     $prospective_users = $row['prospective_users'];
                     $commercialization = $row['commercialization'];
                     $business_status = $row['business_status'];
@@ -173,7 +191,7 @@ session_start();
               Awards won 
               </h5>
               <p>
-                YES<a class="ml-2" href="#!">Download File</a>
+              <?php echo $awardsWon; ?>
               </p>
 
               <h5>
@@ -214,40 +232,36 @@ session_start();
               </p>
 
               <h5>
-              Do you have an Indian patent?  
+              Has your technology been validated by a 3rd party?
               </h5>
               <p>
-              2992138J<a class="ml-2" href="#!">Download File</a>
+              <?php echo $third_party_validated; ?>
               </p>
 
               <h5>
-              Do you have an International Patent for this technology?
+              Has the innovation been featured or described or presented in any publications/conferences/ exhibits?
               </h5>
               <p>
-              2992138J<a class="ml-2" href="#!">Download File</a>
+              <?php echo $featured; ?>
               </p>
+
+              <h5>
+              Has the innovation/ technology been presented in any competition?
+              </h5>
+              <p>
+              <?php echo $presented; ?>
+              </p>
+
 
               <h5>
               Describe the competition in your product segment?
               </h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-                voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-                officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
+              <?php echo $competition; ?>
               </p>
-
-              <h5>
-              Please provide key differentiators that give you an edge over your competitors? 
-              </h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, temporibus nulla
-                voluptatibus accusantium sapiente doloremque. Doloribus ratione laboriosam culpa. Ab
-                officiis quidem, debitis nostrum in accusantium dolore veritatis eius est?
-              </p>
-
             <ul class="list-group">
-                <li class="list-group-item">Stage of Technology: <b>TRL 9</b></li>
-                <li class="list-group-item">name of your product/technology: <b>My Tech</b></li>
+                <li class="list-group-item">Stage of Technology: <b><?php echo $stageTechnology ?></b></li>
+                <li class="list-group-item">Name of your product/technology: <b><?php echo $productName ?></b></li>
             </ul>
 
 
@@ -256,27 +270,27 @@ session_start();
 
             <!--Section: Share buttons-->
             <section class="text-center border-top border-bottom py-4 mb-4">
-              <button type="button" class="btn btn-primary mr-1">
-                Download Documents
-              </button>
-              <button type="button" class="btn btn-primary mr-1">
-                IT Returns
-              </button>
-              <button type="button" class="btn btn-primary mr-1">
-                DUE Diligence
-              </button>
+              <?php
+                echo '
+                  <a class="btn btn-primary mr-1" href="../'.$description_document.'">
+                  Document Description
+                  </a>
 
-              <button type="button" class="btn btn-primary mr-1">
-                Financial Projection
-              </button>
-              <br />
-              <br />
-              <button type="button" class="btn btn-primary mr-1">
-                Business Plan
-              </button>
-              <button type="button" class="btn btn-primary mr-1">
-                Pitch Deck
-              </button>
+                  <a class="btn btn-primary mr-1" href="../'.$photos_product.'">
+                  Photos
+                  </a>
+
+                  
+                ';
+
+                if ($itreturns != '') {
+                    echo '
+                      <a class="btn btn-primary mr-1" href="../'.$itreturns.'">
+                        IT Returns
+                      </a>
+                    ';
+                }
+              ?>
             </section>
             <!--Section: Share buttons-->
             <!--Section: Reply-->

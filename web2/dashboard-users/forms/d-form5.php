@@ -115,6 +115,32 @@
             </div>
         </div>
 
+        <div class="row mt-4">
+            <div class="col">
+                <h5>Any Awards Won?</h5>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col col-lg-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Yes" name="awards" id="flexRadioDefault7" checked>
+                    <label class="form-check-label" for="flexRadioDefault7awards">
+                        Yes
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="No" name="awards" id="flexRadioDefault8">
+                    <label class="form-check-label" for="flexRadioDefault8awards">
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+
 
         <div class="row mt-4">
             <div class="col">
@@ -125,8 +151,8 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" name="businessStatus" id="businessStatus" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required name="businessStatus" id="businessStatus" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Incorporated Company">Incorporated Company</option>
                     <option value="Academic Institution">Academic Institution</option>
                     <option value="Govt. Laboratory">Govt. Laboratory</option>
@@ -146,8 +172,8 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" name="primaryCustomers" id="primaryCustomers" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required name="primaryCustomers" id="primaryCustomers" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="B2B">B2B</option>
                     <option value="B2C">B2C</option>
                     <option value="B2G">B2G</option>
@@ -165,8 +191,8 @@
         <div class="row mt-2">
             
             <div class="col">
-                <select class="form-select" name="commercialization" id="commercialization" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required name="commercialization" id="commercialization" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Manufacturing & Distribution">Manufacturing & Distribution</option>
                     <option value="Licensing">Licensing</option>
                     <option value="Sale of Product/Service">Sale of Product/Service</option>
@@ -211,7 +237,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-check">
-                    <textarea class="form-control" name="describeSegement" id="describeSegement" rows="10"></textarea>
+                    <textarea class="form-control" required name="describeSegement" id="describeSegement" rows="10"></textarea>
                 </div>
             </div>
         </div>
@@ -225,7 +251,7 @@
         <div class="row mt-2">
             <div class="col">
                 <div class="form-check">
-                    <textarea class="form-control" name="uniqueSelling" id="uniqueSelling" rows="10"></textarea>
+                    <textarea class="form-control" required name="uniqueSelling" id="uniqueSelling" rows="10"></textarea>
                 </div>
             </div>
         </div>

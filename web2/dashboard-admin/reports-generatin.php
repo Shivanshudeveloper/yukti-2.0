@@ -1,9 +1,9 @@
 <?php include './includes/header.inc.php' ?>
     <main class="my-5">
       <div class="container">
-        <button class="btn btn-success float-right">
+        <a href="print.php?id=PROJECT5f6771e93740a1600614889" target="_blank" class="btn btn-success float-right">
             Download PDF
-        </button>
+        </a>
         <br />
         <br />
         <h5 class="font-weight-bold text-dark">
@@ -99,99 +99,6 @@
                             <option value="Water, Sanitation and Waste Management">Water, Sanitation and Waste Management</option>
                             <option value="Others">Others</option>
                         </select>
-
-                        <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Project Name</th>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Candidate Name</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 1
-                                            </a>
-                                        </td>
-                                        <td>Agriculture</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 2
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 3
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 4
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 5
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 6
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 7
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 8
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                     </section>
                 </div>
                 <div
@@ -311,101 +218,6 @@
                                     </select>
                                 </div>
                             </div>
-
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Project Name</th>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Candidate Name</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 1
-                                            </a>
-                                        </td>
-                                        <td>Agriculture</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 2
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 3
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 4
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 5
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 6
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 7
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>
-                                            <a href="general-info.php">
-                                                Test Project 8
-                                            </a>
-                                        </td>
-                                        <td>Sports</td>
-                                        <td>Shivanshu Gupta</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            
                     </section>
                 </div>
             </div>

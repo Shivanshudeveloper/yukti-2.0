@@ -11,7 +11,7 @@
                 <h5>Name of Inventor</h5>
             </div>
             <div class="col">
-                <input type="text" class="form-control" id="nameInventor" name="nameInventor" aria-describedby="emailHelp">
+                <input type="text" required class="form-control" id="nameInventor" name="nameInventor" aria-describedby="emailHelp">
             </div>
         </div>
 
@@ -20,8 +20,8 @@
                 <h5>Gender</h5>
             </div>
             <div class="col">
-                <select class="form-select" id="gender" name="gender" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required id="gender" name="gender" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -34,8 +34,8 @@
                 <h5>Category</h5>
             </div>
             <div class="col">
-                <select class="form-select" id="category" name="category" aria-label="Default select example">
-                    <option selected>-- SELECT YOUR OPTIONS --</option>
+                <select class="form-select" required id="category" name="category" aria-label="Default select example">
+                    <option value="" selected>-- SELECT YOUR OPTIONS --</option>
                     <option value="General">General</option>
                     <option value="SC">SC</option>
                     <option value="ST">ST</option>
@@ -49,7 +49,7 @@
                 <h5>Email</h5>
             </div>
             <div class="col">
-                <input type="email" id="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
+                <input type="email" required id="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
             </div>
         </div>
 
@@ -58,7 +58,7 @@
                 <h5>Phone No.</h5>
             </div>
             <div class="col">
-                <input type="number" id="phoneno" name="phoneno" class="form-control" id="exampleInputEmail1" placeholder="+91" aria-describedby="emailHelp">
+                <input type="number" required id="phoneno" name="phoneno" class="form-control" id="exampleInputEmail1" placeholder="+91" aria-describedby="emailHelp">
             </div>
         </div>
         
@@ -96,7 +96,7 @@
             <h5>Full Name</h5>
         </div>
         <div class="col">
-            <input type="text" id="contact_full_name" name="contact_full_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" required id="contact_full_name" name="contact_full_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
     </div>
 
@@ -105,7 +105,7 @@
             <h5>Email</h5>
         </div>
         <div class="col">
-            <input type="email" id="contact_email" name="contact_email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
+            <input type="email" required id="contact_email" name="contact_email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" aria-describedby="emailHelp">
         </div>
     </div>
 
@@ -114,7 +114,7 @@
             <h5>Phone No.</h5>
         </div>
         <div class="col">
-            <input type="number" id="contact_phoneno" name="contact_phoneno" class="form-control" id="exampleInputEmail1" placeholder="+91" aria-describedby="emailHelp">
+            <input type="number" required id="contact_phoneno" name="contact_phoneno" class="form-control" id="exampleInputEmail1" placeholder="+91" aria-describedby="emailHelp">
         </div>
     </div>
 

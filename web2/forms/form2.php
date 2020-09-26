@@ -76,7 +76,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Institute Name</label>
-                            <?php include '../includes/search_institutes.php' ?>
+                            <?php include '../includes/search_institutes_copy.php' ?>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>

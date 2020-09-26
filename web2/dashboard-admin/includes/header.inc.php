@@ -68,6 +68,16 @@
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="assigninvestors.php"
+                  >Assigned Investors</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="assignmentors.php"
+                  >Assigned Mentors</a
+                >
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="bulk.php"
                   >Bulk Allocation</a
                 >

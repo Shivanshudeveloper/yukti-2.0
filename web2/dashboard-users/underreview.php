@@ -1,11 +1,13 @@
 <?php include './includes/header.inc.php' ?>
+<?php session_start(); ?>
+
     <!--Main layout-->
     <main class="my-5">
       <div class="container">
         <?php
           include_once '../src/php/dbh.php';
           // From Session
-          $userId = '12345678';
+          $userId = $_SESSION['user_id'];
           $sql = "SELECT * FROM allprojects WHERE user_id = '$userId';";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
