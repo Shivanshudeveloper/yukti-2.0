@@ -26,24 +26,61 @@
                 <img class="img img-fluid w-25" src="../images/MIC_LOGO.png" alt="MIC" srcset="">
             </a>
         </center>
-
         <center>
             <div class="card w-50 mt-2 shadow">
                 <div class="card-body">
                     <h5 style="color: #ff2400" class="card-title text-center display-4 font-weight-bold">Yukti 2.0</h5>
-                    
-                    <form class="text-left">
+                    <?php
+                        if (isset($_GET['e'])) {
+                            if ($_GET['e'] == 'pc') {
+                                echo '
+                                    <div class="alert alert-danger" >
+                                        Please Confirm the Password
+                                    </div>
+                                ';
+                            } elseif ($_GET['e'] == 'ea') {
+                                echo '
+                                    <div class="alert alert-danger" >
+                                        Email Already Registered Please <a href="../login.php">Login</a>
+                                    </div>
+                                ';
+                            } elseif ($_GET['e'] == 'ss') {
+                                echo '
+                                    <div class="alert alert-success" >
+                                        Registered Successfully
+                                    </div>
+                                ';
+                            } 
+                        }
+                    ?>
+                    <form action="../src/php/main.php" method="POST" class="text-left">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" required name="fullname" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
+                        <?php
+                            if (isset($_GET['t'])) {
+                                echo '
+                                    <input name="t" type="hidden" value="'.$_GET['t'].'" class="form-control" required id="exampleInputPassword1">
+                                ';
+                                if ($_GET['t'] == 'i') {
+                                    echo '
+                                        <input name="type" type="hidden" value="INCUBATOR/ACCELERATOR" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                } elseif ($_GET['t'] == 'm') {
+                                    echo '
+                                        <input name="type" type="hidden" value="MENTORS" class="form-control" required id="exampleInputPassword1">
+                                    ';
+                                }
+                            }
+                        ?>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1">
+                            <input type="email" name="email" required class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Sector of Incubation</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="sector" required class="form-control" id="exampleInputPassword1">
                         </div>
 
                         <div class="mb-3">
@@ -51,7 +88,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                        <input value="YES" class="form-check-input" type="radio" name="rad" id="flexRadioDefault1" checked>
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             Yes
                                         </label>
@@ -59,7 +96,7 @@
                                     </div>
                                     <div class="col">
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                                        <input value="NO" class="form-check-input" type="radio" name="rad" id="flexRadioDefault2" >
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             No
                                         </label>
@@ -67,12 +104,9 @@
                                     </div>
                                 </div>
                         </div>
-
-
-
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Phone No</label>
-                            <input type="phone" class="form-control" id="exampleInputPassword1">
+                            <input type="number" name="phone" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Institute Name</label>
@@ -80,17 +114,17 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" name="password" required class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" name="confirmpassword" required class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <a href="" style="text-decoration: none;" class="form-check-label" for="exampleCheck1">I accept Terms & Conditions</a>
                         </div>
-                        <a href="dashboard.php" class="btn btn-primary btn-lg btn-block">Register</a>
+                        <button type="submit" name="userForm2SubmitBtn" class="btn btn-primary btn-lg btn-block">Register</button>
                     </form>
                 </div>
             </div>

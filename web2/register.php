@@ -44,7 +44,7 @@
             <div class="row mt-4">
                 <div class="col col-md">
                     <div class="card shadow">
-                        <a href="commpingsoon.php">
+                        <a href="forms/form2.php?t=m">
                         <div class="card-body">
                             <center>
                                 <img src="https://img.icons8.com/color/80/000000/conference-background-selected.png"/>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col col-md">
                     <div class="card shadow">
-                        <a href="commpingsoon.php">
+                        <a href="forms/form2.php?t=i">
                         <div class="card-body">
                             <center>
                                 <img src="https://img.icons8.com/color/80/000000/front-desk.png"/>

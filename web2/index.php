@@ -136,7 +136,7 @@
             <div class="row mt-4">
                 <div class="col col-md">
                     <div class="card shadow">
-                        <a href="commpingsoon.php">
+                        <a href="forms/form2.php?t=m">
                         <div class="card-body">
                             <center>
                                 <img src="https://img.icons8.com/color/80/000000/conference-background-selected.png"/>
@@ -148,7 +148,7 @@
                 </div>
                 <div class="col col-md">
                     <div class="card shadow">
-                        <a href="commpingsoon.php">
+                        <a href="forms/form2.php?t=i">
                         <div class="card-body">
                             <center>
                                 <img src="https://img.icons8.com/color/80/000000/front-desk.png"/>
@@ -175,6 +175,47 @@
         
         <!-- Gallery Area End -->
         <!--? Categories Area Start -->
+
+        <section class="categories-area section-padding40 gray-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-100">
+                            <h2>Ideas Submitted</h2>
+                        </div>
+                    </div>
+                </div>
+            <br />
+            <br />
+            <div class="row row-cols-1 row-cols-md-3">
+                <?php
+                    include_once './src/php/dbh.php';
+                    $sql = "SELECT * FROM ideas WHERE approved = 1 ORDER BY id DESC LIMIT 10;";
+                    $result = mysqli_query($conn, $sql);
+                    while($row = mysqli_fetch_assoc($result)) {
+                        $message=$row['description'];
+                        $post = substr($message, 0, 250);
+                        echo '
+                            <div class="col mb-4">
+                                <div class="card border-0" style="width: 30rem;">
+                                    <img src="./'.$row['documents'].'" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="#!" class="h1">'.$row['title'].'</a>
+                                        <p class="card-text mt-1">'.$post.'</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ';
+                    }
+                ?>
+                
+
+
+            </div>
+            </div>
+        </section>
+
+
         <div class="categories-area section-padding40 gray-bg">
             <div class="container">
                 <div class="row justify-content-center">

@@ -97,6 +97,11 @@
                   >Evaluators</a
                 >
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ideas.php"
+                  >Ideas</a
+                >
+              </li>
             </ul>
 
             <ul class="navbar-nav list-inline">

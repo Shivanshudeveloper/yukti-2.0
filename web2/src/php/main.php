@@ -276,7 +276,7 @@ if (isset($_POST['userFormSubmitBtn'])) {
             header("Location: ../../forms/form1.php?e=ea&t=".$t);
             exit();
         } else {
-            $sql = "INSERT INTO `users_2`(`user_id`, `full_name`, `email`, `phone`, `institute`, `type`, `password`) VALUES ('$userID','$fullname','$email','$phone','$institute','$type','$password')";
+            $sql = "INSERT INTO `users_2`(`user_id`, `full_name`, `email`, `phone`, `institute`, `type`, `sector_incubation`, `partner_support`, `password`) VALUES ('$userID','$fullname','$email','$phone','$institute','$type','NIL','NIL','$password')";
             mysqli_query($conn, $sql);
             header("Location: ../../login.php?e=ss&t=".$t);
             exit();    
@@ -285,14 +285,12 @@ if (isset($_POST['userFormSubmitBtn'])) {
         header("Location: ../../forms/form1.php?e=pc&t=".$t);
         exit();
     }
-
 }
 
 if (isset($_POST['submitLoginBtn'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $sql = "SELECT * FROM users_2 WHERE email = '$email';";
-    echo $sql;
     $result = mysqli_query($conn, $sql);
     $resultChk = mysqli_num_rows($result);
 
@@ -339,5 +337,81 @@ if (isset($_GET['d'])) {
     mysqli_query($conn, $sql);
 
     header("Location: ../../dashboard-admin/viewannouncement.php?s=ss");
+    exit();
+}
+
+
+if (isset($_POST['userForm2SubmitBtn'])) {
+    $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $type = mysqli_real_escape_string($conn, $_POST['type']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+    $institute = mysqli_real_escape_string($conn, $_POST['institute']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $confirmpassword = mysqli_real_escape_string($conn, $_POST['confirmpassword']);
+    $t = mysqli_real_escape_string($conn, $_POST['t']);
+    $partner = mysqli_real_escape_string($conn, $_POST['rad']);
+    $sector = mysqli_real_escape_string($conn, $_POST['sector']);
+
+    if ($password == $confirmpassword) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $userID = uniqid('USER');
+        $userID = $userID.time();
+
+        $sql = "SELECT `full_name` FROM users_2 WHERE email = '$email';";
+        $result = mysqli_query($conn, $sql);
+        $resultChk =  mysqli_num_rows($result);
+        if ($resultChk > 0) {
+            header("Location: ../../forms/form2.php?e=ea&t=".$t);
+            exit();
+        } else {
+            $sql = "INSERT INTO `users_2`(`user_id`, `full_name`, `email`, `phone`, `institute`, `type`, `sector_incubation`, `partner_support`, `password`) VALUES ('$userID','$fullname','$email','$phone','$institute','$type','$sector','$partner','$password')";
+            mysqli_query($conn, $sql);
+            header("Location: ../../login.php?e=ss&t=".$t);
+            exit();    
+        }
+    } else {
+        header("Location: ../../forms/form1.php?e=pc&t=".$t);
+        exit();
+    }
+}
+
+if (isset($_POST['ideaSubmitBtn'])) {
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+
+    $ideaID = uniqid('idea');
+    $ideaID = $ideaID.time();
+    $userID = $_SESSION['user_id'];
+
+    $file_name = $_FILES['document']['name'];
+    $file_size =$_FILES['document']['size'];
+    $file_tmp =$_FILES['document']['tmp_name'];
+    $file_type=$_FILES['document']['type'];
+    $file_ext=strtolower(end(explode('.',$_FILES['document']['name'])));
+    move_uploaded_file($file_tmp,"../../uploads/ideas/".$ideaID.$file_name);
+    $path_document = "uploads/ideas/".$ideaID.$file_name;
+
+    $sql = "INSERT INTO `ideas`(`uid`, `user_id`, `title`, `description`, `documents`, `approved`) VALUES ('$ideaID','$userID','$title','$description','$path_document', 0);";
+    mysqli_query($conn, $sql);
+    header("Location: ../../dashboard-users/idea.php?s=ss");
+    exit();
+}
+
+if (isset($_GET['d2'])) {
+    $id = $_GET['id'];
+
+    $sql = "DELETE FROM ideas WHERE id = '$id';";
+    mysqli_query($conn, $sql);
+
+    header("Location: ../../dashboard-users/allideas.php?s=ss");
+    exit();
+}
+
+if (isset($_GET['ap'])) {
+    $id = $_GET['id'];
+    $sql = "UPDATE ideas SET approved = 1 WHERE id = '$id';";
+    mysqli_query($conn, $sql);
+    header("Location: ../../dashboard-admin/ideas.php?s=ss");
     exit();
 }
