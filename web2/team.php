@@ -25,9 +25,76 @@
         <!-- Hero End -->
         <!--? Categories Area Start -->
         <section class="mt-4 mb-4">
+                <br />
                 <h1 class="text-center mt-4 mb-4">
-                    Implementation Team
-                </h1>    
+                    Chief Patraints
+                </h1> 
+                <div class="row">
+                <div class="col">
+                    <div>
+                    <center>    
+                    <img src="https://www.admissionhunt.com/wp-content/uploads/2020/06/1.jpg" alt="Avatar" class="avatar">
+                    </center>
+                        <h3 class="text-center" >
+                        Prof. Anil D. Sahasrabudhe
+                        </h3>
+                        <h4 class="text-center">
+                             Chairman AICTE
+                        </h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                    <center>    
+                    <img src="https://www.mhrd.gov.in/sites/mhrd.gov.in/themes/nexus/images/whoswho/amit_khare.jpg" alt="Avatar" class="avatar">
+                    </center>    
+                        <h3 class="text-center" >
+                        Sh. Amit Khare
+                        </h3>
+                        <h4 class="text-center">
+                        MHRD Secretary
+                        </h4>
+                    </div>
+                </div>
+            </div>   
+            <br />
+                <br />
+                <h1 class="text-center mt-4 mb-4">
+                    Chief Patraints
+                </h1> 
+                <div class="row">
+                <div class="col">
+                    <div>
+                    <center>    
+                    <img src="https://www.aicte-india.org/sites/default/files/poonia.JPG" alt="Avatar" class="avatar">
+                    </center>
+                        <h3 class="text-center" >
+                        Dr. M. P. Poonia
+                        </h3>
+                        <h4 class="text-center">
+                            Vice Chairman AICTE
+                        </h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                    <center>    
+                    <img src="https://www.aicte-india.org/sites/default/files/Rajive%20Kumar.jpg" alt="Avatar" class="avatar">
+                    </center>    
+                        <h3 class="text-center" >
+                        Prof. Rajive Kumar
+                        </h3>
+                        <h4 class="text-center">
+                        Member Secretary
+                        </h4>
+                    </div>
+                </div>
+            </div>   
+            <br />
+            <br />
+            <h1 class="text-center mt-4 mb-4">
+                Implementation Team
+            </h1> 
             <div class="row">
                 <div class="col">
                     <div>

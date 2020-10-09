@@ -84,8 +84,9 @@
                                                 <li><a href="announcement.php">Announcements</a></li>
                                                 <li><a href="faq.php">FAQ</a></li>
                                                 <li><a href="team.php">Team</a></li>
-                                                <!-- <li><a href="faq.php">Technology Incubators</a></li> -->
-                                                <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li>
+                                                <li><a href="submission.php">Submissions</a></li>
+                                                <li><a href="reports.php">Reports</a></li>
+                                                <!-- <li><a style="cursor: pointer;" class="text-secondary" id="contactUs2">Contact Us</a></li> -->
                                                 <script>
                                                     $("#contactUs2").on('click',function() {
                                                         $('html, body').animate({

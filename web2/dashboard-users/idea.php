@@ -50,6 +50,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="col col-lg-3">
+                        <h5>Would you like it Public Access</h5>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" name="publicAccess" aria-label="Default select example">
+                            <option selected>-- SELECT YOUR OPTIONS --</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                        </select>
+                    </div>
+                </div>
+
                 <center>
                     <button type="submit" name="ideaSubmitBtn" class="btn btn-primary mt-2 w-25">Submit</button>
                 </center>

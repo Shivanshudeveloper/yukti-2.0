@@ -176,18 +176,11 @@
         <!-- Gallery Area End -->
         <!--? Categories Area Start -->
 
-        <section class="categories-area section-padding40 gray-bg">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mb-100">
-                            <h2>Ideas Submitted</h2>
-                        </div>
-                    </div>
-                </div>
-            <br />
-            <br />
-            <div class="row row-cols-1 row-cols-md-3">
+        <section style="padding-top: 100px;" class="pb-5 container">
+            <h1 class="display-4 font-weight-bold ml-3 mb-2">
+                Few of the Startups at our Portal
+            </h1>
+            <div class="slider owl-carousel">
                 <?php
                     include_once './src/php/dbh.php';
                     $sql = "SELECT * FROM ideas WHERE approved = 1 ORDER BY id DESC LIMIT 10;";
@@ -196,22 +189,19 @@
                         $message=$row['description'];
                         $post = substr($message, 0, 250);
                         echo '
-                            <div class="col mb-4">
-                                <div class="card border-0" style="width: 30rem;">
-                                    <img src="./'.$row['documents'].'" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <a href="#!" class="h1">'.$row['title'].'</a>
-                                        <p class="card-text mt-1">'.$post.'</p>
-                                    </div>
+                            <div class="card">
+                                <div class="img">
+                                    <img src="./'.$row['documents'].'" alt="">
+                                </div>
+                                    <div class="content">
+                                        <div class="title">
+                                        '.$row['title'].'
+                                        </div>
                                 </div>
                             </div>
                         ';
                     }
                 ?>
-                
-
-
-            </div>
             </div>
         </section>
 

@@ -92,7 +92,7 @@
             $sql = "SELECT * FROM innovation_d_1 WHERE project_id = '$projectID';";
             $result = mysqli_query($conn, $sql);
             if ($row = mysqli_fetch_assoc($result)) {
-                if ($row['stage'] != 'TRL 0-2') {
+                if ($row['stage'] != 'TRL 2') {
                     echo '
                         <div class="row mt-4">
                             <div class="col col-lg-5 ml-4">

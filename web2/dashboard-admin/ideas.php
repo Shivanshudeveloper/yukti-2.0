@@ -1,5 +1,4 @@
 <?php include './includes/header.inc.php' ?>
-<?php session_start(); ?>
     <!----------------------------------------------------------------------- 
       
     This template was created with MDB 5 UI KIT (Material Design for Bootstrap 5).
@@ -40,6 +39,7 @@
                                 </center>
                                 <div class="card-body">
                                 <h1 class="card-title">'.$row['title'].'</h1>
+                                <h2>Public Access: '.$row['public'].'</h2>
                                 <p class="card-text">'.$row['description'].'</p>
                                 <a href="../src/php/main.php?ap=t&id='.$row['id'].'" class="btn btn-danger">Approved</a>
                                 </div>

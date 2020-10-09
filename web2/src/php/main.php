@@ -118,6 +118,10 @@ if (isset($_POST['d5SubmitBtn'])) {
     
     mysqli_query($conn, "INSERT INTO `allprojects`(`user_id`, `project_id`, `progress`, `completed`, `status`, `investors`, `mentors`) VALUES ('$userID','$projectID', 0, 0, 0, 0, 0)");
 
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('A Project Successfully Submitted','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-users/forms/thankyou.php?id=".$projectID);
     exit();
 }
@@ -150,6 +154,10 @@ if (isset($_POST['allocateEvaluatorBtn'])) {
     // User ID to be given here from Session
     $userID = $_SESSION['user_id'];
 
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Evaluator Allocated','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-admin/info.php?id=".$projectID."&s=g");
     exit();
 }
@@ -174,6 +182,10 @@ if (isset($_POST['evaluatorApprovedBtn'])) {
 
     $sql = "UPDATE allprojects SET completed = 1, status = '$status' WHERE project_id = '$projectID';";
     mysqli_query($conn, $sql);
+
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Evaluator Approved','$date')";
+    mysqli_query($conn, $sql);
     
     header("Location: ../../dashboard-evaluator/home.php?id=".$projectID."&s=g");
     exit();
@@ -184,6 +196,10 @@ if (isset($_POST['evaluatorDisapprovedBtn'])) {
     $evaluatorsEmailID = mysqli_real_escape_string($conn, $_POST['evaluatorsEmailID']);
 
     $sql = "UPDATE allprojects SET completed = 1, status = -1 WHERE project_id = '$projectID';";
+    mysqli_query($conn, $sql);
+
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Evaluator Disapproved','$date')";
     mysqli_query($conn, $sql);
     
     header("Location: ../../dashboard-evaluator/home.php?id=".$projectID."&s=d");
@@ -218,6 +234,10 @@ if (isset($_POST['allocateInvestorBtn'])) {
     // User ID to be given here from Session
     $userID = $_SESSION['user_id'];
 
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Investor Successfully Allocated','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-admin/investorinfo.php?id=".$projectID."&is=g");
     exit();
 }
@@ -250,6 +270,10 @@ if (isset($_POST['allocateMentorBtn'])) {
     mysqli_query($conn, $sql);
     // User ID to be given here from Session
     $userID = $_SESSION['user_id'];
+
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('A Mentor Successfully Allocated','$date')";
+    mysqli_query($conn, $sql);
 
     header("Location: ../../dashboard-admin/investorinfo.php?id=".$projectID."&ms=g");
     exit();
@@ -379,6 +403,7 @@ if (isset($_POST['userForm2SubmitBtn'])) {
 if (isset($_POST['ideaSubmitBtn'])) {
     $title = mysqli_real_escape_string($conn, $_POST['title']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $publicAccess = mysqli_real_escape_string($conn, $_POST['publicAccess']);
 
     $ideaID = uniqid('idea');
     $ideaID = $ideaID.time();
@@ -392,8 +417,13 @@ if (isset($_POST['ideaSubmitBtn'])) {
     move_uploaded_file($file_tmp,"../../uploads/ideas/".$ideaID.$file_name);
     $path_document = "uploads/ideas/".$ideaID.$file_name;
 
-    $sql = "INSERT INTO `ideas`(`uid`, `user_id`, `title`, `description`, `documents`, `approved`) VALUES ('$ideaID','$userID','$title','$description','$path_document', 0);";
+    $sql = "INSERT INTO `ideas`(`uid`, `user_id`, `title`, `description`, `documents`, `public`, `approved`) VALUES ('$ideaID','$userID','$title','$description','$path_document','$publicAccess', 0);";
     mysqli_query($conn, $sql);
+
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('New Idea Submitted','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-users/idea.php?s=ss");
     exit();
 }
@@ -404,6 +434,10 @@ if (isset($_GET['d2'])) {
     $sql = "DELETE FROM ideas WHERE id = '$id';";
     mysqli_query($conn, $sql);
 
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Idea Deleted','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-users/allideas.php?s=ss");
     exit();
 }
@@ -412,6 +446,11 @@ if (isset($_GET['ap'])) {
     $id = $_GET['id'];
     $sql = "UPDATE ideas SET approved = 1 WHERE id = '$id';";
     mysqli_query($conn, $sql);
+
+    $date = date("l jS \of F Y");
+    $sql = "INSERT INTO `notification`(`notification`, `date`) VALUES ('An Idea Approved','$date')";
+    mysqli_query($conn, $sql);
+
     header("Location: ../../dashboard-admin/ideas.php?s=ss");
     exit();
 }

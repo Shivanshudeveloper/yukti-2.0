@@ -76,7 +76,7 @@
             <div class="col">
                 <select class="form-select" id="stage" required name="stage" aria-label="Default select example">
                     <option value="" selected>-- SELECT YOUR OPTIONS --</option>
-                    <option value="TRL 0-2">TRL 0-2</option>
+                    <option value="TRL 2">TRL 2</option>
                     <option value="TRL 3">TRL 3</option>
                     <option value="TRL 4-5">TRL 4-5</option>
                     <option value="TRL 6-9">TRL 6-9</option>

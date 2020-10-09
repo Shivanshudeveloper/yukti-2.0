@@ -66,11 +66,11 @@
                   >Projects Under Review</a
                 >
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="idea.php"
                   >Submit an Idea</a
                 >
-              </li>
+              </li> -->
             </ul>
             <ul class="navbar-nav list-inline">
               <li class="nav-item">

@@ -2,7 +2,6 @@
 <?php include './includes/header.inc.php' ?>
 <?php 
 include_once '../src/php/dbh.php';
-session_start(); 
 ?>
     <!--Main layout-->
     <main class="mt-4 mb-5">
@@ -47,7 +46,7 @@ session_start();
                         echo $row['name_product']; 
                         echo '</span>';
                         echo '
-                          <p>'.$row['nameInventor'].' ('.$_SESSION['type'].')</p>
+                          <p>'.$row['nameInventor'].' (STUDENT)</p>
                         ';
                         $industryUse = $row['industry_use'];
                       }

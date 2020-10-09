@@ -97,9 +97,14 @@
                   >Evaluators</a
                 >
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="ideas.php"
                   >Ideas</a
+                >
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="notification.php"
+                  >Notification</a
                 >
               </li>
             </ul>
